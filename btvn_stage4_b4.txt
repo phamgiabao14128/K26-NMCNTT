@@ -1,0 +1,41 @@
+Phân tích CPU, RAM, Storage và File Tree
+
+
+PHẦN 1: PHÂN TÍCH
+
+Mở 20 tab Chrome + VS Code làm RAM 8GB nhanh đầy.
+
+Kiểm tra Task Manager:
+
+RAM gần 90-100% → thiếu RAM, máy có thể dùng Swap file trên SSD nên bị lag.
+
+CPU gần 100% → CPU đang quá tải, cần giảm các tác vụ đang chạy.
+
+RAM giống "bàn làm việc": chứa dữ liệu và chương trình đang sử dụng.
+
+Storage giống "ngăn tủ": lưu trữ dữ liệu lâu dài.
+
+Khi RAM đầy, Windows dùng SSD làm bộ nhớ ảo → chậm hơn RAM.
+
+PHẦN 2: THIẾT KẾ FILE TREE
+
+D:
+└── projects
+└── python
+├── project-01
+│ ├── src
+│ ├── assets
+│ └── README.md
+└── project-02
+├── src
+├── assets
+└── README.md
+
+Naming Convention: dùng kebab-case, chữ thường, các từ nối bằng dấu "-".
+
+Ví dụ:
+
+Code của tôi → code-cua-toi
+
+Project Python → python-project
+
