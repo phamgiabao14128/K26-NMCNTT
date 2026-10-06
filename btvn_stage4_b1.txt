@@ -1,0 +1,78 @@
+Phần 1. Phân tích
+1. Sai lầm về vị trí lưu trữ
+Nam đang lưu bài tập tại:
+C:\Windows\System32\Bai Tap Cua Nam\Session 01\bai tap 1.py
+
+Đây là vị trí không phù hợp vì C:\Windows\System32 là thư mục hệ thống quan trọng của Windows. Không nên dùng nơi này để lưu bài tập cá nhân vì:
+Có thể cần quyền Administrator để tạo/sửa/xóa một số file.
+Dễ vô tình sửa hoặc xóa nhầm file hệ thống.
+Làm lẫn dữ liệu cá nhân với dữ liệu của hệ điều hành.
+Khi bảo trì, cài lại Windows hoặc xử lý sự cố, dữ liệu cá nhân ở phân vùng hệ thống có rủi ro cao hơn.
+Cách khắc phục: tạo một thư mục riêng cho việc học trên ổ D:, ví dụ D:\study\python\....
+2. Sai lầm về cách đặt tên
+Tên:
+Bai Tap Cua Nam
+Session 01
+bai tap 1.py
+
+không tuân thủ kebab-case.
+Kebab-case có đặc điểm:
+
+Chữ thường.
+Các từ được ngăn cách bằng dấu gạch ngang -.
+Không dùng khoảng trắng.
+Không cần viết hoa tùy tiện.
+Ví dụ:
+Bai Tap Cua Nam → bai-tap-cua-nam
+
+Session 01 → session-01
+
+bai tap 1.py → bai-tap-1.py
+
+Ngoài ra, tên file nên mô tả nội dung thay vì chỉ đặt chung chung là "bài tập 1" nếu có thể.
+3. Hiểu lầm về tốc độ mạng
+Nam đăng ký gói 100 Mbps nhưng khi tải file chỉ thấy 12.5 MB/s và cho rằng nhà mạng lừa đảo.
+Thực tế, đây là kết quả hoàn toàn phù hợp về mặt quy đổi đơn vị.
+Mạng thường quảng cáo tốc độ bằng Mbps:
+Mbps = Megabit/giây
+Trong khi trình tải file thường hiển thị:
+MB/s = Megabyte/giây
+Ta có:
+1 Byte = 8 bit
+100 Mbps ≈ 12.5 MB/s
+
+Chưa tính các yếu tố như giao thức mạng, máy chủ tải xuống, Wi-Fi, đường truyền thực tế..., tốc độ 12.5 MB/s không phải bằng chứng nhà mạng lừa đảo mà chính là mức lý thuyết tương ứng với 100 Mbps.
+4. Vì sao SSD 256 GB lại hiển thị thấp hơn 256?
+Cần phân biệt cách tính của nhà sản xuất và hệ điều hành.
+Nhà sản xuất SSD thường dùng hệ thập phân:
+238.4
+Vì vậy một SSD ghi 256 GB khi xem trong Windows thường sẽ thấy khoảng 238 GB trước khi tính đến các phần dung lượng dành cho phân vùng, hệ thống, định dạng và các thành phần khác.
+Kết luận: SSD không bị "thiếu" dung lượng; chủ yếu là do cách quy đổi đơn vị khác nhau và một phần dung lượng được hệ thống sử dụng.
+Phần 2. Hoàn thiện cây thư mục
+Có thể thiết kế thư mục học tập trên ổ D: theo nguyên tắc 3 cấp, đồng thời áp dụng 4 trụ cột: cấu trúc rõ ràng, đặt tên nhất quán, dễ mở rộng và dễ quản lý.
+Cây thư mục đề xuất
+D:\
+└── study\
+    └── python\
+        ├── session-01\
+        │   ├── bai-tap-01.py
+        │   ├── bai-tap-02.py
+        │   └── notes.md
+        ├── session-02\
+        │   ├── bai-tap-01.py
+        │   └── bai-tap-02.py
+        └── session-03\
+            └── bai-tap-01.py
+
+Ở đây có thể hiểu 3 cấp thư mục chính là:
+Cấp 1: study
+Cấp 2: python
+Cấp 3: session-01 / session-02 / session-03
+
+Các file .py nằm trong cấp cuối để tránh tạo cây thư mục quá sâu.
+Naming Convention
+Thành phần	Tên cũ	Tên chuẩn
+Thư mục	Bai Tap Cua Nam	study
+Môn/chủ đề	—	python
+Buổi học	Session 01	session-01
+File	bai tap 1.py	bai-tap-01.py
