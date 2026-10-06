@@ -1,0 +1,45 @@
+DIKW – MOMO-LITE
+
+DATA
+
+Input: Thu thập lịch sử giao dịch, số tiền, thời gian, loại chi tiêu.
+
+Process: Lưu dữ liệu vào Storage/Database.
+
+Output: Dữ liệu giao dịch.
+
+INFORMATION
+
+Input: Dữ liệu giao dịch.
+
+Process: Tổng hợp và phân loại chi tiêu theo tháng.
+
+Output: Báo cáo chi tiêu tháng.
+
+KNOWLEDGE
+
+Input: Báo cáo và lịch sử chi tiêu.
+
+Process: So sánh với ngân sách đã đặt.
+
+Output: Cảnh báo khi chi tiêu quá mức.
+
+WISDOM
+
+Input: Lịch sử + xu hướng chi tiêu.
+
+Process: Phân tích và đưa ra kế hoạch phù hợp.
+
+Output: Gợi ý kế hoạch tiết kiệm.
+
+LƯU TRỮ
+
+1 giao dịch = 1 KB.
+
+1.000.000 giao dịch/ngày = 1.000.000 KB ≈ 1.000 MB ≈ 1 GB/ngày.
+
+FILE .ENV
+
+Chứa API key/mã bí mật.
+
+Là file ẩn, cần bảo vệ và không chia sẻ công khai.
