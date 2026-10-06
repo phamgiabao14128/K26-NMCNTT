@@ -1,0 +1,32 @@
+KIẾN TRÚC DIKW – TRANG TRẠI LAN THÔNG MINH
+
+DATA
+
+Cảm biến thu thập độ ẩm, nhiệt độ, lượng nước.
+
+INFORMATION
+
+Phân tích dữ liệu và thông báo cho chủ vườn khi độ ẩm thấp hoặc nhiệt độ cao.
+
+KNOWLEDGE
+
+Quy tắc: Nhiệt độ > 35°C → tự động bật máy bơm.
+
+WISDOM
+
+Kết hợp dữ liệu lịch sử và dự báo thời tiết để tối ưu lượng nước tưới.
+
+LƯU TRỮ
+
+50 MB/ngày × 365 ngày = 18.250 MB ≈ 18,25 GB/năm.
+
+Chỉ sử dụng tối đa 70% ổ đĩa:
+18,25 ÷ 0,7 ≈ 26,1 GB.
+
+Cần ổ đĩa tối thiểu khoảng 27 GB, nên chọn 32 GB trở lên.
+
+FILE ẨN
+
+.env: chứa mật khẩu → cần bảo vệ, không xóa và không đưa lên Git.
+
+.git: chứa dữ liệu quản lý Git → không tùy tiện xóa.
