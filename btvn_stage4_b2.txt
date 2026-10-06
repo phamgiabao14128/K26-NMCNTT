@@ -1,0 +1,17 @@
+1. Lỗi FileNotFoundError
+Đường dẫn tuyệt đối như:
+C:\Users\Nam\Desktop\shopee-lite\assets\logo.png
+
+chỉ đúng trên máy Nam. Khi chuyển sang máy khác, vị trí thư mục thay đổi nên Python không tìm thấy file.
+Giải pháp: dùng đường dẫn tương đối:
+from pathlib import Path
+logo_path = Path(__file__).parent / "assets" / "logo.png"
+
+2. Luồng IPO và CPU/RAM/Storage
+Storag-> RAM ->CPU-> Output
+Storage: lưu code và file ảnh lâu dài.
+RAM: chứa chương trình và dữ liệu đang chạy.
+CPU: lấy dữ liệu từ RAM để xử lý.
+Output: kết quả hiển thị trên màn hình hoặc ghi ra file.
+3. Vì sao RAM 98%?
+Khi RAM gần đầy, máy thiếu bộ nhớ để chạy chương trình và có thể phải dùng Virtual Memory trên SSD, khiến máy chậm hoặc treo.
