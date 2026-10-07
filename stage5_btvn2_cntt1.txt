@@ -1,0 +1,7 @@
+Phần 1:
+ b1:pwd để xem các thư mục hiện tại ( Desktop)
+ b2: ls để xem các file đang có trong thư mục- vì deploy.ps1 không có trong trong desktop nên sẽ kkhoong có thư mục
+ b3: xác dịnh vij tris file get-childItem -path . -filter "deploy.ps1"
+Phần 2: 
+ b1 dùng đường dẫn tương đối c ..\dowloads\Project
+ b2 ls để kiểm tra các thư mục hiện có    
