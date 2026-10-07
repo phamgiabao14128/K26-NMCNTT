@@ -1,0 +1,6 @@
+Tạo cây thư mục
+1 mkdir .\Farm-Manager\code\app, Farm-Manager\database\db, Farm-Manager\logs\guides
+2 cd đến thư mục app gõ ni main.py , models.py , utils.py
+3 cd đến farm-managern tạo thư mục logs-backup( mkdir log-backup ) tiếp theo gõ lệnh copy-item logs -destination logs-backup -recurse
+phần 2
+dùng đường dẫn tương đối để không phụ thuộc vào tên người dùng ổ hoặc vị trí cụ thể ở một pc nên chọn đường dẫn tươn đối vì nó có thể chạy được nhiều máy khác nhau mà không cần sửa đường dẫn
