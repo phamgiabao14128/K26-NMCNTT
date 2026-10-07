@@ -1,0 +1,12 @@
+Phần 1: 
+   3 lỗi sai của Nam
+      1. tạo thư mục Shopee project có khoảng trắng nhưng không có dấu "..."
+      2. do đã lỗi từ bước tạo thư mục nên khi gõ cd Shopee projects sẽ không có và lỗi
+      3. lệnh copy từ src -destion sang src-backup -Recurse bị lỗi do thư mục src-backup chưa được tạo
+Phần 2: 
+    Viết lại chuỗi câu lệnh 
+    mkdir "Shopee Projects"
+    cd '.\Shopee Projects\'
+    mkdir src\assets\images
+    mkdir src-backup
+    copy-item src src-backup
