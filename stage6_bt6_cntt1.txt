@@ -1,0 +1,16 @@
+B1: mkdir smart-farm, bin, config, data
+B2: cd config 
+    ni .env
+ get-childItem mcawj định không hiển thị các mục có thuộc tính ẩn
+ get-childitem -force: hiển thị cả các mục ẩn và mục hệ thống
+B3:ci "$HOME\public\template.ps1" "$HOME\smart-farm\bin\pump_control.ps1
+B4 tree smart-farm
+
+
+
+
+Nhấn phím Windows, gõ PowerShell.
+Nhấp chuột phải vào Windows PowerShell hoặc Terminal.
+Chọn Run as administrator (Chạy với tư cách quản trị viên).
+Chọn Yes nếu cửa sổ User Account Control xuất hiện.
+Chạy lại lệnh sao chép:
