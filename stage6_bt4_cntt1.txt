@@ -1,0 +1,108 @@
+Phần 1: Bảng so sánh Absolute Path và Relative Path
+
+Tiêu chí
+
+	
+
+Absolute Path (Đường dẫn tuyệt đối)
+
+	
+
+Relative Path (Đường dẫn tương đối)
+Độ dài
+
+	
+
+Thường dài, chứa đầy đủ đường dẫn từ ổ đĩa hoặc thư mục gốc.
+
+	
+
+Thường ngắn gọn hơn, tính từ thư mục hiện tại.
+
+
+
+
+Tính di động khi gửi project
+
+	
+
+Thấp hơn vì đường dẫn có thể khác trên máy người nhận.
+
+	
+
+Cao hơn nếu giữ nguyên cấu trúc thư mục của project.
+
+
+
+
+Ưu điểm
+
+	
+
+Xác định vị trí tệp cụ thể, dễ tìm khi biết chính xác đường dẫn.
+
+	
+
+Linh hoạt, dễ chia sẻ mã nguồn và chuyển project giữa các máy.
+
+
+
+
+Nhược điểm
+
+	
+
+Phụ thuộc vào ổ đĩa, tên người dùng hoặc vị trí lưu tệp.
+
+	
+
+Phụ thuộc vào thư mục làm việc hoặc vị trí của tệp đang tham chiếu.
+
+Phần 2: Lựa chọn giải pháp tối ưu
+
+Lựa chọn: Relative Path (Đường dẫn tương đối).
+
+Lý do:
+
+Đường dẫn ngắn gọn, dễ đọc và dễ quản lý.
+
+Khi gửi project cho người khác, mã nguồn có thể hoạt động trên máy của họ mà không cần sửa đường dẫn tuyệt đối, miễn là cấu trúc thư mục được giữ nguyên và đường dẫn được tính từ đúng vị trí.
+
+Giúp tăng tính di động (Portability) của dự án.
+
+Ý nghĩa của ký hiệu ..
+
+Trong đường dẫn tương đối, .. có nghĩa là đi lên một cấp thư mục cha.
+
+Ví dụ, giả sử cấu trúc thư mục như sau:
+
+FarmProject/
+├── scripts/
+│   └── read_sensor.py
+└── data/
+    └── logs.csv
+
+Nếu tệp read_sensor.py cần đọc logs.csv, đường dẫn tương đối từ thư mục scripts là:
+
+../data/logs.csv
+
+Giải thích:
+
+..: Đi từ thư mục scripts lên thư mục cha FarmProject.
+
+data/: Đi vào thư mục data.
+
+logs.csv: Truy cập tệp dữ liệu cần đọc.
+
+Lưu ý: Trong Python, nên xác định đường dẫn dựa trên vị trí của tệp script để tránh lỗi khi chạy chương trình từ một thư mục làm việc khác nhau.
+
+Ví dụ:
+
+from pathlib import Path
+
+project_dir = Path(__file__).resolve().parent.parent
+file_path = project_dir / "data" / "logs.csv"
+
+print(file_path)
+
+Đoạn code trên xác định thư mục gốc FarmProject từ vị trí của read_sensor.py, sau đó tìm đến tệp data/logs.csv.
