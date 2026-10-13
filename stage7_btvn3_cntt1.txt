@@ -1,0 +1,12 @@
+[Get-Content .\access.log] 
+       │
+       │ (1. Xuất dữ liệu dòng log ra stdout)
+       | ─ ─> [Select-String "TIMEOUT"] (Nhận input qua stdin, lọc các dòng chứa lỗi)
+                    │
+                    │ (2. Xuất các dòng đã lọc ra stdout)
+                    | ─ ─> [Measure-Object -Line] (Nhận input qua stdin, đếm tổng số dòng)
+                                 │
+                                 │ (3. Lọc lấy giá trị số dòng duy nhất)
+                          [Con số tổng cuối cùng]
+2 viết câu lệnh 
+ get-content access.log | select-string "timeout" | measure-object -line).count
