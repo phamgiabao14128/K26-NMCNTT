@@ -1,0 +1,6 @@
+Phần 1:  
+ Lệnh Cat là lệnh hiển thị toàn bộ nội dung có trong file tượng tự như get-content
+ vì notpad là trình soạn thảo văn bản của win hoạt đọng theo cơ chế tải toàn bộ nội dung của file trực tiếp vvaof RAM để xử lí khi mở trệp nặng ( 500mb) ram của pc sẽ bị ngốn cạn kiệt hoặc tràn  dẫ đến quá trình output chậm,lag đơ máy
+Phần 2: 
+  để xem toàn bộ file theo từng trang ta có câu lệnh: get-content server_log_500mb | more
+  để xxem 10 dòng cuopoois cùng có câu lệnh:get-content server_log_500mb -tail 10
