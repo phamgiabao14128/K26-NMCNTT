@@ -1,0 +1,5 @@
+Phần 1: 
+ vì đang yêu câu tìm về lỗi 404 mà An sử dụng lệnh get-childitem nên kết quả sẽ rỗng bởi vì câu lện gc chỉ cho phép dùng để kiếm tên thư mục hoặc tên file
+ sự khác nhau giữa gc và select-string là gc sẽ tìm kiếm tên và select-string sẽ tìm kiếm trong file	
+Phần 2: 
+ viết lại câu lệnh : select_string -path "access.log" -pattern "ERROR"
