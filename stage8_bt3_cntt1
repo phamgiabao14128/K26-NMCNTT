@@ -1,0 +1,23 @@
+Phần 1. Phân tích luồng dữ liệu
+Pipeline (|) cho phép kết nối nhiều lệnh PowerShell, trong đó đầu ra của lệnh trước trở thành đầu vào của lệnh sau.
+Bước 1: Đọc tệp log
+Get-Content "access.log"
+Đọc nội dung tệp, trả về từng dòng văn bản.
+Bước 2: Lọc sự cố
+Where-Object
+Giữ dòng chứa TIMEOUT và loại bỏ dòng NOT TIMEOUT.
+Bước 3: Đếm kết quả
+Measure-Object -Line
+Đếm số dòng sự cố hợp lệ và xuất ra tổng số.
+Kết quả báo cáo
+Một con số duy nhất
+Giải thích
+- Get-Content: Đọc nội dung tệp log.
+- Where-Object: Lọc các dòng theo điều kiện.
+- -match "TIMEOUT": Giữ các dòng có chứa từ khóa TIMEOUT.
+- -notmatch "NOT TIMEOUT": Loại các dòng chứa cụm từ NOT TIMEOUT.
+- Measure-Object -Line: Đếm số dòng còn lại.
+Lưu ý: Select-String trả về các đối tượng MatchInfo, chứa thông tin như tên tệp và số dòng. Còn Get-Content trả về các dòng văn bản; vì vậy, có thể dùng Measure-Object -Line để đếm trực tiếp các dòng đã lọc.
+Phần 2. Triển khai câu lệnh
+Giả sử tệp access.log nằm trong thư mục hiện tại, sử dụng một dòng lệnh PowerShell sau:
+(Get-Content ".\access.log" | Where-Object { $_ -match "TIMEOUT" -and $_ -notmatch "NOT TIMEOUT" } | Measure-Object -Line).Lines
