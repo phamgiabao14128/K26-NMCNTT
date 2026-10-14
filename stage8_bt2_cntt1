@@ -1,0 +1,7 @@
+Phần 1: 
+    get-chilitem là liệt kê toàn bộ file&folder
+    slect string là liệt kê toàn bộ nội dung
+    vậy nên an không tìm được các dòng chứa lỗi là do ch hiểu rõ bản chất của các câu lệnh
+
+Phần 2: 
+    select-string "error" access.log
