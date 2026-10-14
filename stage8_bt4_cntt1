@@ -1,0 +1,13 @@
+Phần 1: set-content là ghi đè nội dung mới vào nội dung cũ có khả năng mất ndung cũ
+        add-content là ghi thêm ndung mới vào ndung cũ mà vẫn giữ lại đc ndung cũ
+        nên sử dụng set-content trong việc lưu trữ như việc làm ca sáng vì không cần lữu trữ lại ndung cũ của htrc 
+        nên sử dụng add-content trong việc lưu trữ như 24/7 vì cần cập nhật liên tục và cẫn những dữ liệu cũ
+
+        endcoding:
+         add-content ohuj thuộc vào phiên bản powershell và encoding của file hiện có nên dùng khi cần tính nhất quán
+         set-content UTF-8, có thể ghi đè vào nội dun cũ không phù hợp với file log ttichs lũy
+Phần 2: nên sử dụng add-content
+        bởi vì sử dụng add-content sẽ không ghi đè lên những dữ liệu cũ và phù họp trong suốt ngày làm việc
+        có thể bổ sung thời gian cấp dộ để dễ tra cứu 
+        sử dụng utf 8 để lưu trữ dữ liệu tiếng việt
+         
