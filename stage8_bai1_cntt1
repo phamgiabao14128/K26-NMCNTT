@@ -1,0 +1,7 @@
+Phần 1: 
+   do tệp có dung lượng 800mb, chứa luongjw văn bản rất lớn, notepad phải đọc và xử lí dữ liệu lớn đồng thơi phải lấy thêm ram để hiển thị văn bản sẽ dễ gây ra quá tải ram dẫn đến chậm lag hoặc có thể bị treo
+   cat không phải là lệnh mặc định trong cmd, nên cmd sẽ báo lỗi nhận diện lệnh
+   cat giống như get-content trong powershell nên có thể đọc được lệnh
+Phần 2: 
+dòng lệnh để xem toàn bộ ndung tệp là: gc server__log_800mb.log or cat server_log_800mb.log
+để xxem lỗi 10 dòng cuối sử dụng câu lệnh: gc server_log_800mb.log -tail 10
