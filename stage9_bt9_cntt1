@@ -1,0 +1,25 @@
+1 
+Cài đặt Git
+Sao chép repository: git clone https://github.com/example/club-wiki.git
+Tạo nhánh và đóng góp tài liệu
+2
+File [README.md](http://README.md) phải chứa đầy đủ 5 phần sau:
+**Phần 1 — Giới thiệu CLB:** 
+Tên CLB, mô tả ngắn (in đậm điểm nổi bật), Heading phân cấp H1/H2.
+**Phần 2 — Danh sách Ban:** 
+Bảng Markdown 3 cột: Tên Ban | Trưởng Ban | Liên hệ (email dạng link mailto:)
+**Phần 3 — Hướng dẫn Gia nhập:** 
+Danh sách có thứ tự (Ordered List) 3-5 bước với lệnh git trong Code Block.
+**Phần 4 — Checklist Nhiệm vụ Thành viên Mới:** 
+Task List tối thiểu 5 mục (mix \[x\] đã có sẵn và \[ \] cần làm).
+**Phần 5 — Lưu ý quan trọng:** 
+Blockquote chứa thông tin deadline và quy tắc ứng xử CLB.
+Bẫy 1: Email phải là liên kết bấm được
+Cú pháp đúng
+markdown
+[an@ptit.edu.vn](mailto:an@ptit.edu.vn)
+Khi nhấn vào, hệ thống sẽ mở ứng dụng email mặc định để soạn thư gửi đến địa chỉ đó, nếu thiết bị được cấu hình hỗ trợ.
+Bẫy 2: URL không hợp lệ được xử lý thế nào?
+Nếu URL sai cú pháp hoặc không tồn tại, liên kết có thể không hoạt động hoặc dẫn đến trang lỗi.
+Markdown không tự động xác minh URL có tồn tại hay không
+Cách phòng tránh: kiểm tra URL trước khi đưa vào README, thử mở liên kết và cập nhật địa chỉ chính xác
