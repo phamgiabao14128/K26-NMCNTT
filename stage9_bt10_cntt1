@@ -1,0 +1,23 @@
+1
+Input: Câu hỏi về Markdown Parser, trình độ sinh viên năm nhất
+Output: Giải thích đơn giản, có ví dụ
+2
+Tiêu chí            A: Văn xuôi        	B: Markdown
+Chính xác           Khá                     Cao
+Token               	Thấp                  	Cao
+ái sử dụng            Thấp                    Cao
+Dễ học                 Dễ                    Cần luyện tập
+3
+## Bối cảnh
+Tôi là sinh viên năm nhất IT-101
+## Khái niệm
+Token trong AI.
+## Yêu cầu
+Giải thích dễ hiểu
+Có ví dụ đời thường
+Dài 100–150 t
+## Không cần
+Thuật ngữ phức tạp
+Giải quyết hai bẫy:
+Bẫy 1: Đặt yêu cầu sai phần, AI vẫn có thể hiểu nhưng dễ bỏ sót. Nên đặt độ dài trong ## Yêu cầu
+Bẫy 2: Chiến lược A tiết kiệm Token, phù hợp câu hỏi đơn giản; B phù hợp nhiệm vụ phức tạp và cần tái sử dụng
