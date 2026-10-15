@@ -1,0 +1,25 @@
+1
+Truy cập https://code.visualstudio.com/ để tải VS Code.
+Kiểm tra phiên bản trong Terminal:
+code --version
+2
+tạo tệp hello.py:
+student_name = "An"
+
+def greeting(name):
+    print(f"Xin chào, {name}!")
+
+greeting(student_name)
+Chạy chương trình:
+python hello.py
+3 
+	StackEdit:	Trực tuyến	Soạn thảo, xem trước	Không chuyên dụng	Dễ viết tài liệu
+  VS Code:	Ứng dụng máy tính	Soạn thảo, xem trước	Hỗ trợ lập trình	Mạnh về lập trình
+4
+Cài đặt VS Code
+Cài đặt Python
+Tạo tệp hello.py
+Chạy chương trình thành công
+5
+\* hiển thị *
+\# hiển thị #
