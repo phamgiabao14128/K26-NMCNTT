@@ -1,0 +1,6 @@
+1
+Token là đơn vị văn bản AI dùng để xử lý dữ liệu. Markdown thường ngắn gọn hơn HTML, giúp giảm số Token đầu vào, tiết kiệm chi phí và có thể giảm thời gian xử lý
+2
+Markdown:	Ít hơnThường ít hơn Cao Có thể nhanh hơnREADME: Rất phù hợp
+HTML: Nhiều hơn Có thể nhiều hơn Thấp hơn Có thể chậm hơn Ít phổ biến hơn
+Chọn Markdown vì cú pháp đơn giản, dễ đọc, tiết kiệm Token và dễ bảo trì. Lập trình viên thường dùng Markdown viết README vì hỗ trợ tốt tiêu đề, danh sách, bảng và khối mã trên GitHub.
