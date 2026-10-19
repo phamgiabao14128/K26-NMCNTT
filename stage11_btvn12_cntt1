@@ -1,0 +1,16 @@
+phần 1: srs & heading
+cấu trúc 1, 2, 3 (Heading 1), mục con x.x (Heading 2), 2.1.1 (Heading 3).
+chèn Auto TOC ở đầu, cập nhật lại số trang sau khi ngắt trang mục 3.
+
+phần 2: chuẩn hóa database & filter
+3 lỗi vàng: merge ô (A1:E1), để hàng trống (hàng 5), đưa dòng tổng cộng vào giữa vùng dữ liệu.
+tao tác Filter: chọn bảng, bấm Ctrl + Shift + L, lọc cột Tình Trạng = "Quá hạn".
+
+phần 3: vlookup
+công thức: =IFERROR(VLOOKUP(C2, DanhMucSach!$A$2:$C$4, 2, FALSE), "không tìm thấy ách")
+mã S099 báo lỗi #N/A do không có trong danh mục, bọc IFERROR để đổi thành chữ thông báo.
+
+phần 4: slide báo cáo
+assertion Title: “hệ thống đã chuẩn hóa database và xử lý ngoại lệ thành công bằng vlookup.”
+biểu đồ: dùng Donut Chart hiển thị tỷ lệ trạng thái mượn sách.
+quy tắc: 1 slide duy nhất, 2 phút trình bày, cỡ chu≥ 30 pt.
