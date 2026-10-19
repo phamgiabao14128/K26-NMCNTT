@@ -1,0 +1,44 @@
+
+phần 1: phân tích
+đầu vào: 8 người cùng soạn tài liệu 40 trang, cần mục lục tự động, heading h1/h2/h3, bảng biểu, và phải in a4 phát cho ban giám khảo.
+đầu ra: tài liệu không lỗi font, mục lục đúng, biết ai sửa gì, nộp cho giảng viên đọc được.
+ưu nhược điểm:
+word + onedrive: mạnh về heading, mục lục, track changes, in ấn ổn định. yếu là cần cài word trả phí, bản online thiếu vài tính năng.
+google docs: cộng tác mượt, miễn phí, chỉ cần trình duyệt. yếu là bảng và mục lục kém tùy chỉnh, xuất ra dễ lệch layout.
+phần 2: so sánh và lựa chọn
+tiêu chí	a:            word + onedrive	b: google docs
+cộng tác nhóm                 	⚠️	             ✅
+tính năng văn phòng            	✅	             ⚠️
+in ấn và xuất pdf              	✅              ⚠️
+hạ tầng	                        ⚠️	             ✅
+nộp cho giảng viên	            ✅	             ⚠️
+chốt: dùng giải pháp lai. soạn bằng google docs, chỉnh lần cuối và in bằng word.
+lý do:
+bẫy 1: có bạn không có word thì không sửa được file nếu chọn a. google docs chỉ cần trình duyệt nên ai cũng sửa được.
+bẫy 2: máy in ở trường chỉ có word. nếu chỉ dùng google docs thì phải tải file .docx về rồi mở bằng word để in.
+luồng làm việc:
+cả nhóm soạn trên google docs, dùng heading styles ngay từ đầu soạn xong thì tải về dạng .docx.
+một bạn có word mở file, cập nhật mục lục, kiểm tra font và bảng. xuất pdf, in thử vài trang.ngày hội nghị mang usb có cả .docx và pdf để phòng lỗi.
+nộp cho giảng viên file pdf hoặc .docx, không chỉ gửi link.
+phần 3: cấu trúc heading
+h1: 1. tổng quan hội nghị
+  h2: 1.1 mục tiêu
+    h3: 1.1.1 mục tiêu chính
+    h3: 1.1.2 đối tượng tham dự
+  h2: 1.2 thời gian và địa điểm
+    h3: 1.2.1 lịch trình tổng thể
+h1: 2. chương trình hội nghị
+  h2: 2.1 chương trình theo ngày
+    h3: 2.1.1 ngày 1: khai mạc
+    h3: 2.1.2 ngày 2: thảo luận và bế mạc
+  h2: 2.2 danh sách diễn giả
+h1: 3. phân công nhân sự
+  h2: 3.1 ban thư ký
+    h3: 3.1.1 nhiệm vụ từng thành viên
+  h2: 3.2 tình nguyện viên
+h1: 4. ngân sách và hậu cần
+  h2: 4.1 dự toán kinh phí
+    h3: 4.1.1 chi phí in ấn
+    h3: 4.1.2 chi phí thuê địa điểm
+h1: 5. rủi ro và dự phòng
+h1: phụ lục
