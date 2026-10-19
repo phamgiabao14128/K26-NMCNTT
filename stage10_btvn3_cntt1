@@ -1,0 +1,19 @@
+phần 1: phân tích 4 tham số của VLOOKUP trong bài toán kho hàng
+trong cái bối cảnh quản lý kho hàng của bài tập này, hàm VLOOKUP sinh ra để cứu cánh tụi mình khỏi cảnh ngồi dò tay từng dòng giữa sheet đơn hàng và sheet danh mục. cấu trúc huyền thoại của nó đây:
+=VLOOKUP(lookup_value, table_array, col_index_num, range_lookup)
+lookup_value (giá trị cần tìm kiếm):
+bản chất: cái để hàm dựa vào đó mà đi dò.
+trong bài: chính là mã linh kiện nằm ở sheet đơn hàng (ví dụ ô A2 chứa mã LK01). máy sẽ bốc cái mã này đi soi ở bảng danh mục xem có khớp không.
+table_array (bảng dữ liệu tra cứu):
+bản chất: cái kho chứa dữ liệu gốc để dò tìm.
+trong bài: là vùng dữ liệu bên sheet Danh_Muc (ví dụ Danh_Muc!A$2:C$100). cực kỳ lưu ý: đoạn này phải kẹp dấu đô la ($) vào để cố định vùng ($A$2:$C$100), không lúc kéo công thức xuống dưới là nó trôi đi mất xác, lỗiùm lum lên đấy (đúng cái bẫy 1 trong đề bài hay nhắc).
+col_index_num (số thứ tự cột lấy kết quả):
+bản chất: đếm từ trái sang phải trong cái bảng tra cứu xem cột cần lấy dữ liệu nằm ở cột số mấy.
+trong bài:
+nếu đang tìm tên linh kiện và cái cột tên đó đứng thứ 2 trong bảng danh mục, thì điền số 2.
+nếu đang tìm đơn giá và cột đơn giá đứng thứ 3, thì điền số 3.
+range_lookup (kiểu tìm kiếm chính xác hay tương đối):
+bản chất: quy định cách tìm kiếm (TRUE/1 hoặc FALSE/0).
+trong bài: bắt buộc phải chốt cứng là 0 (hoặc FALSE) để tìm chính xác tuyệt đối mã linh kiện. vì đây là mã định danh, lệch một ký tự là đi tong, không thể dùng tìm kiếm gần đúng (TRUE) được.
+phần 2: công thức hoàn chỉnh
+=IFERROR(VLOOKUP(TRIM(A2), Danh_Muc!$A$2:$C$100, 3, FALSE), 0)
