@@ -1,0 +1,35 @@
+phần 1: so sánh app chat cá nhân và enterprise workspace
+1. so sánh 5 tiêu chí
+tiêu chí 1: phân loại tin nhắn
+zalo thường có các nhóm chat mà tin nhắn công việc và tin nhắn tán gẫu nằm chung với nhau. vì vậy, khi có quá nhiều tin nhắn mới thì thông báo quan trọng dễ bị trôi. còn lark và slack cho phép chia thành các channel theo từng chủ đề, giúp mọi người dễ tìm đúng thông tin hơn.
+tiêu chí 2: tìm kiếm file cũ
+trên zalo, người dùng có thể tìm tin nhắn và file nhưng đôi khi sẽ mất thời gian nếu không nhớ từ khóa hoặc vị trí gửi file. lark và slack có công cụ tìm kiếm giúp tìm lại tin nhắn, tài liệu và thông tin cũ thuận tiện hơn.
+tiêu chí 3: quản lý công việc
+với zalo, mọi người thường giao việc trực tiếp qua tin nhắn nên dễ quên deadline hoặc không biết công việc đã hoàn thành chưa. trong khi đó, lark và slack có thể kết hợp với các công cụ quản lý công việc để giao nhiệm vụ, đặt thời hạn và theo dõi tiến độ.
+tiêu chí 4: quản lý thông báo
+trên zalo, tin nhắn quan trọng có thể bị che khuất bởi nhiều tin nhắn meme hoặc tán gẫu. lark và slack cho phép tạo kênh thông báo riêng, ghim nội dung và cài đặt thông báo để hạn chế bỏ lỡ thông tin quan trọng.
+iêu chí 5: làm việc nhóm
+zalo dễ sử dụng và phù hợp với việc trò chuyện hằng ngày, nhưng khi nhóm có nhiều dự án thì việc quản lý thông tin sẽ khó khăn hơn. lark và slack phù hợp với môi trường làm việc chuyên nghiệp vì có thể chia nhóm, lưu tài liệu và kết hợp với các công cụ làm việc khác.
+2. đánh giá ưu điểm và nhược điểmzalo có ưu điểm là dễ sử dụng, quen thuộc với nhiều người và thuận tiện khi nhắn tin nhanh. tuy nhiên, khi có quá nhiều tin nhắn trong một nhóm, thông tin quan trọng rất dễ bị trôi. mọi người có thể phải hỏi lại nhiều lần hoặc mất thời gian tìm kiếm.
+lark và slack có cách tổ chức thông tin rõ ràng hơn, giúp nhân viên dễ tìm lại nội dung cũ và theo dõi công việc. tuy nhiên, mọi người cần thời gian làm quen và phải thống nhất cách sử dụng để tránh tạo quá nhiều kênh không cần thiết.
+theo em, nếu startup có nhiều dự án và deadline thì nên sử dụng lark hoặc slack để quản lý công việc tốt hơn. zalo vẫn có thể dùng để liên lạc cá nhân hoặc trao đổi những việc không quá quan trọng.
+phần 2: đánh giá và đề xuất giải pháp
+1. tại sao nên chuyển từ zalo sang lark/slack?
+các công ty it thường phải trao đổi nhiều thông tin như giao việc, báo lỗi, cập nhật tiến độ và thông báo deadline. nếu tất cả đều nằm trong một nhóm chat chung thì rất dễ xảy ra tình trạng tin nhắn quan trọng bị trôi.
+í dụ, trưởng nhóm thông báo hạn nộp bài lúc 17 giờ thứ sáu, nhưng sau đó có 50 tin nhắn meme và tán gẫu. khi nhân viên muốn xem lại deadline thì phải kéo lên tìm hoặc hỏi lại người khác. điều này làm mất thời gian và có thể khiến công việc bị chậm.
+lark và slack có thể giúp giải quyết vấn đề này vì có thể phân loại tin nhắn theo từng chủ đề, tìm lại tài liệu cũ và kết hợp việc trao đổi với quản lý công việc. nhờ đó, nhân viên giảm thời gian tìm kiếm thông tin và hạn chế các cuộc họp chỉ để hỏi lại những nội dung đã được thông báo.
+tuy nhiên, không thể khẳng định tất cả công ty it đều sử dụng lark hoặc slack. việc lựa chọn công cụ còn phụ thuộc vào quy mô, chi phí và nhu cầu của từng công ty.
+2. giải pháp cho hiện tượng tin nhắn bị phẳng một hàng
+theo em, có 3 giải pháp chính.
+giải pháp 1: chia channel theo từng chủ đề
+nên tạo các kênh riêng như #announcements để thông báo deadline, #engineering để trao đổi kỹ thuật và #random để nói chuyện ngoài công việc. như vậy, nhân viên sẽ dễ tìm thông tin hơn và không bị lẫn giữa công việc với tán gẫu.
+giải pháp 2: sử dụng thread để trả lời tin nhắn
+khi có người đặt câu hỏi về một thông báo, mọi người nên trả lời trực tiếp trong thread thay vì gửi tin nhắn mới vào nhóm chung. cách này giúp các câu trả lời nằm cùng một chỗ và không làm trôi thông báo ban đầu.
+ví dụ, khi trưởng nhóm thông báo deadline nộp bài, các câu hỏi về định dạng, nội dung và thời hạn có thể được trả lời ngay bên dưới thông báo đó.
+giải pháp 3: kết hợp tin nhắn với task
+đối với những công việc quan trọng, không nên chỉ gửi tin nhắn nhắc nhở mà cần tạo task cụ thể. task cần có tên công việc, người phụ trách, deadline và trạng thái hoàn thành. nhờ vậy, mọi người có thể theo dõi tiến độ và tránh quên nhiệm vụ.
+3. cách tiết kiệm thời gian họp
+khi sử dụng lark hoặc slack, nhóm có thể cập nhật tiến độ bằng tin nhắn, tài liệu và task thay vì tổ chức họp cho mọi vấn đề nhỏ. các cuộc họp chỉ nên tập trung vào những vấn đề cần thảo luận trực tiếp hoặc cần đưa ra quyết định chung.
+ví dụ, nếu giảm được 20 cuộc họp mỗi tháng, mỗi cuộc giảm 30 phút và trung bình có 6 người tham dự thì thời gian tiết kiệm được là:
+20 × 0,5 × 6 = 60 giờ-người mỗi tháng.
+đây chỉ là ví dụ giả định, nhưng nó cho thấy nếu quản lý giao tiếp tốt thì công ty có thể tiết kiệm đáng kể thời gian làm việc.

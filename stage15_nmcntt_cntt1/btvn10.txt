@@ -1,0 +1,116 @@
+phan 1: phan tich va de xuat
+1. phan tich yeu cau bai toan
+nhom campuspay co 4-5 thanh vien, dang su dung zalo de trao doi cong viec. tuy nhien, nhom da gap su co ro ri du lieu va mat file. ngoai ra, cac tin nhan quan trong de bi troi khi co qua nhieu tin nhan moi.
+
+vi vay, nhom can mot cong cu giao tiep co the giup moi nguoi trao doi de dang, quan ly cong viec va tim lai thong tin cu.
+
+dau vao la nhu cau giao tiep cua cac thanh vien, bao gom trao doi cong viec, gui file, thong bao deadline va lien lac voi doi tac.
+
+dau ra mong muon la mot cong cu giup han che mat thong tin, de tim lai tin nhan, quan ly cong viec tot hon va phu hop voi dieu kien cua nhom sinh vien.
+
+2. phan tich uu diem va nhuoc diem cua hai giai phap
+giai phap a: tiep tuc su dung zalo
+uu diem:
+
+cac thanh vien da quen su dung nen khong can mat thoi gian hoc lai.
+mien phi va de su dung tren dien thoai.
+co the gui file, hinh anh va ghim tin nhan.
+thuan tien khi lien lac voi doi tac ben ngoai truong dang su dung zalo.
+nhuoc diem:
+
+tin nhan quan trong de bi troi khi nhom co nhieu tin nhan moi.
+kho quan ly cong viec va deadline neu chi giao viec qua tin nhan.
+viec tim lai quyet dinh hoac file cu co the mat thoi gian.
+neu khong quan ly quyen truy cap va cach chia se file tot thi van co nguy co lo du lieu.
+giai phap b: chuyen sang lark suite
+uu diem:
+
+co the chia cac kenh rieng de phan loai thong tin.
+co the tra loi theo tung tin nhan de tranh lam roi cuoc tro chuyen.
+ho tro tao va quan ly cong viec, dat deadline.
+co the tim lai tin nhan va file cu thuan tien hon.
+tich hop tai lieu, lich va hop truc tuyen trong cung mot nen tang.
+co ung dung dien thoai nen thanh vien khong co laptop van co the su dung.
+nhuoc diem:
+
+cac thanh vien can khoang 1-2 ngay de lam quen theo gia dinh cua de bai.
+phai chuyen cac thong tin va tai lieu quan trong sang noi luu tru moi.
+can thong nhat quy tac su dung de tranh tao qua nhieu kenh.
+doi tac ben ngoai van co the yeu cau lien lac qua zalo.
+phan 2: so sanh va lua chon
+3. danh gia 5 tieu chi
+tieu chi 1: ngan chan tin nhan bi troi
+
+zalo: ⚠️ trung binh, vi tin nhan quan trong co the bi day len boi cac tin nhan moi.
+lark: ✅ tot, vi co the chia kenh thong bao rieng va tra loi theo tung chu de.
+tieu chi 2: quan ly cong viec
+
+zalo: ❌ kem, vi viec giao viec va nhac deadline chu yeu thong qua tin nhan.
+lark: ✅ tot, vi co the tao nhiem vu, giao cho nguoi phu trach va theo doi tien do.
+tieu chi 3: mien phi va de cai dat
+
+zalo: ✅ tot, vi cac thanh vien da quen su dung va khong can mat nhieu thoi gian lam quen.
+lark: ⚠️ trung binh, vi can thoi gian de hoc cach su dung cac tinh nang moi.
+tieu chi 4: tim kiem lich su
+
+zalo: ⚠️ trung binh, vi viec tim lai file va quyet dinh cu co the mat thoi gian.
+lark: ✅ tot, vi co the tim kiem tin nhan va tai lieu theo tu khoa.
+tieu chi 5: giao tiep bat dong bo
+
+zalo: ⚠️ trung binh, vi thong tin cong viec co the bi lan voi noi dung tan gau.
+lark: ✅ tot, vi co the viet noi dung theo tung chu de va de lai thong tin ro rang de nguoi khac doc sau.
+4. lua chon phu hop cho campuspay
+theo em, nhom nen chon lark lam cong cu chinh de trao doi cong viec va quan ly tai lieu. zalo van duoc giu lai de lien lac voi doi tac ben ngoai.
+
+ly do la campuspay da gap su co mat file va ro ri du lieu. neu tiep tuc su dung cach lam cu ma khong thay doi quy trinh thi nhung van de nay co the tiep tuc xay ra.
+
+doi voi ba van de trong de bai:
+
+thanh vien chi co dien thoai: lark co ung dung dien thoai nen thanh vien ban kinh doanh van co the doc tin nhan, gui file va theo doi cong viec ma khong can laptop.
+mat 1-2 ngay de hoc cach su dung: nhom nen danh thoi gian lam quen voi cac chuc nang co ban. neu deadline dang rat gan thi co the chuyen tung phan, truoc tien ap dung lark cho cac thong bao va cong viec moi, tranh chuyen doi toan bo ngay lap tuc.
+doi tac chi su dung zalo: nhom van dung zalo de trao doi voi doi tac, sau do luu cac thong tin cong viec quan trong vao lark. khong nen yeu cau tat ca doi tac phai chuyen sang cong cu moi.
+nhu vay, phuong an phu hop nhat la su dung ket hop hai cong cu. lark dung cho cong viec noi bo, con zalo dung de lien lac voi doi tac va nhung nguoi ben ngoai nhom.
+
+phan 3: thiet ke va trien khai
+5. thiet ke channel cho campuspay
+nhom co the tao cac kenh sau:
+
+1. #thong-bao
+
+muc dich: dang deadline, lich hop va cac thong bao quan trong.
+quyen dang bai: truong nhom va nguoi duoc phan cong thong bao.
+cac thanh vien con lai chu yeu doc va xac nhan khi can.
+2. #dev
+
+muc dich: trao doi ve lap trinh, sua loi va cac van de ky thuat.
+quyen dang bai: thanh vien ban ky thuat va truong nhom.
+cac thanh vien khac co the dat cau hoi khi can thiet.
+3. #design
+
+muc dich: chia se giao dien, hinh anh va gop y ve thiet ke.
+quyen dang bai: thanh vien phu trach thiet ke va truong nhom.
+cac thanh vien khac co the phan hoi de dong gop y kien.
+4. #kinh-doanh
+
+muc dich: trao doi ve khach hang, ke hoach kinh doanh va quang ba san pham.
+quyen dang bai: thanh vien ban kinh doanh va truong nhom.
+cac thanh vien khac co the tham gia khi noi dung lien quan den cong viec cua minh.
+5. #cong-viec
+
+muc dich: theo doi nhiem vu chung, nguoi phu trach va deadline.
+quyen dang bai: tat ca thanh vien co the cap nhat cong viec cua minh.
+truong nhom chiu trach nhiem kiem tra tien do.
+6. #doi-tac
+
+muc dich: tong hop noi dung lam viec voi doi tac ben ngoai.
+quyen dang bai: thanh vien duoc phan cong lam viec voi doi tac va truong nhom.
+cac thong tin quan trong tu zalo can duoc ghi lai o day de ca nhom de theo doi.
+6. quy tac chong spam @all
+de tranh tinh trang moi nguoi lien tuc nhac ten tat ca thanh vien, nhom nen ap dung quy tac co do.
+
+chi truong nhom hoac nguoi duoc phan cong moi duoc su dung @all.
+chi dung @all khi co viec khan cap hoac thong bao anh huong den toan nhom.
+cac cau hoi thong thuong nen gui vao dung kenh hoac tra loi trong cuoc tro chuyen lien quan.
+khi giao viec cho mot nguoi, chi nhac ten nguoi do thay vi nhac tat ca.
+neu su dung @all cho noi dung khong quan trong, nguoi dang can chinh sua hoac xoa thong bao neu phu hop va nhac lai quy tac cua nhom.
+quy tac co do co nghia la xem viec su dung @all nhu mot canh bao dac biet, chi dung khi that su can thiet. dieu nay giup cac thanh vien chu y hon den nhung thong bao quan trong.

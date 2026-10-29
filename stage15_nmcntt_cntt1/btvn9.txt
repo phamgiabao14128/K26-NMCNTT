@@ -1,0 +1,121 @@
+phần 1: phân tích bài toán
+1. đầu vào và đầu ra
+đầu vào:
+
+ban kỹ thuật có 3 người, phụ trách viết code, test api và quản lý mã nguồn.
+ban thiết kế có 2 người, phụ trách thiết kế giao diện và tạo hình ảnh.
+ban kinh doanh có 2 người, phụ trách viết business plan và liên hệ đối tác.
+nhà đầu tư là người bên ngoài, chỉ cần xem business plan và slide pitch.
+tài liệu có nhiều mức độ bảo mật, đặc biệt là api keys và thông tin khách hàng.
+đầu ra mong muốn:
+
+có hệ thống google drive được sắp xếp rõ ràng, dễ tìm tài liệu.
+mỗi người chỉ được truy cập tài liệu cần thiết cho công việc.
+tài liệu mật không bị chia sẻ công khai.
+tài liệu quan trọng có lịch sử phiên bản ít nhất 30 ngày.
+quyền của nhà đầu tư tự động hết hạn sau 14 ngày.
+có cách thu hồi quyền truy cập khi thành viên nghỉ việc.
+2. đề xuất cấu trúc thư mục google drive
+em đề xuất tạo một thư mục chính tên là campuspay, bên trong chia thành các thư mục theo từng ban và mục đích sử dụng.
+
+thư mục 1: 01-ky-thuat
+
+chứa code, tài liệu kỹ thuật, kế hoạch test api và hướng dẫn cài đặt. chỉ thành viên ban kỹ thuật được chỉnh sửa. các ban khác chỉ được xem khi thực sự cần thiết.
+
+thư mục 2: 02-thiet-ke
+
+chứa bản thiết kế giao diện, hình ảnh, logo và các tài sản đồ họa. ban thiết kế được chỉnh sửa, các ban khác được xem những tài liệu cần cho công việc.
+
+thư mục 3: 03-kinh-doanh
+
+chứa business plan, kế hoạch kinh doanh và tài liệu làm việc với đối tác. ban kinh doanh được chỉnh sửa, các ban khác chỉ được xem khi có nhu cầu.
+
+thư mục 4: 04-tai-lieu-chung
+
+chứa những tài liệu cần sử dụng chung như business summary, yêu cầu sản phẩm và kế hoạch phát triển. các ban liên quan có thể xem và chỉnh sửa theo nhiệm vụ được giao.
+
+thư mục 5: 05-nha-dau-tu
+
+chứa slide pitch và bản pdf đã được duyệt để gửi nhà đầu tư. nhà đầu tư chỉ được xem hoặc tải bản pdf được phép chia sẻ, không được chỉnh sửa file gốc.
+
+thư mục 6: 06-du-lieu-mat
+
+chứa api keys và thông tin khách hàng nhạy cảm. thư mục này phải đặt ở chế độ restricted, chỉ cấp quyền cho những người thực sự cần sử dụng. không chia sẻ bằng liên kết công khai.
+
+3. các bước thiết lập hệ thống
+bước 1: tạo thư mục chính campuspay trên google drive.
+bước 2: tạo các thư mục con theo từng ban và mục đích sử dụng.
+bước 3: đặt tên file rõ ràng để dễ tìm kiếm, ví dụ business-plan, api-test-plan và pitch-deck-approved.
+bước 4: cấp quyền editor cho người cần chỉnh sửa và viewer cho người chỉ cần đọc.
+bước 5: đặt chế độ restricted cho tài liệu mật, không sử dụng anyone with link đối với api keys và thông tin khách hàng.
+bước 6: chia sẻ business plan và slide pitch cho nhà đầu tư bằng quyền viewer, đồng thời đặt ngày hết hạn sau 14 ngày nếu tài khoản hỗ trợ.
+bước 7: kiểm tra quyền truy cập của từng thành viên để đảm bảo không ai xem được tài liệu ngoài phạm vi công việc.
+bước 8: kiểm tra lịch sử phiên bản và thiết lập cách lưu trữ để tài liệu quan trọng đáp ứng yêu cầu giữ lịch sử ít nhất 30 ngày.
+bước 9: khi thành viên nghỉ việc, thu hồi quyền truy cập, xóa khỏi các nhóm được cấp quyền và vô hiệu hóa tài khoản nếu tài khoản do tổ chức quản lý.
+bước 10: kiểm tra quyền định kỳ và cập nhật khi có người đổi nhiệm vụ hoặc rời nhóm.
+phần 2: triển khai và chống lỗi
+4. phân quyền cho từng loại tài liệu
+loại tài liệu 1: code và tài liệu kỹ thuật
+
+ban kỹ thuật: editor để viết code, cập nhật tài liệu và sửa lỗi.
+ban thiết kế: không cấp quyền mặc định.
+ban kinh doanh: viewer nếu cần đọc thông tin kỹ thuật để trao đổi với đối tác.
+nhà đầu tư: không cấp quyền.
+ghi chú bảo mật: không lưu api keys hoặc mật khẩu trực tiếp trong tài liệu code thông thường. nên sử dụng công cụ quản lý thông tin bí mật riêng.
+loại tài liệu 2: file thiết kế giao diện và đồ họa
+
+ban kỹ thuật: viewer khi cần sử dụng thiết kế để phát triển sản phẩm.
+ban thiết kế: editor để tạo và chỉnh sửa file.
+ban kinh doanh: viewer khi cần sử dụng hình ảnh để giới thiệu sản phẩm.
+nhà đầu tư: không cấp quyền trực tiếp vào file thiết kế gốc.
+ghi chú bảo mật: chỉ chia sẻ những file cần thiết, không cấp quyền chỉnh sửa cho người không phụ trách.
+loại tài liệu 3: business plan
+
+ban kỹ thuật: viewer để hiểu mục tiêu và chức năng sản phẩm.
+ban thiết kế: viewer khi cần nắm thông tin về sản phẩm.
+ban kinh doanh: editor để viết và cập nhật kế hoạch.
+nhà đầu tư: viewer có thời hạn 14 ngày.
+ghi chú bảo mật: chỉ chia sẻ với tài khoản được chỉ định, không bật chia sẻ công khai.
+loại tài liệu 4: api keys và thông tin khách hàng
+
+ban kỹ thuật: chỉ những thành viên được chỉ định mới có quyền truy cập.
+ban thiết kế: không cấp quyền.
+ban kinh doanh: chỉ cấp quyền với thông tin khách hàng thực sự cần cho công việc.
+nhà đầu tư: không cấp quyền.
+ghi chú bảo mật: luôn đặt restricted, không sử dụng anyone with link. tốt nhất nên lưu api keys trong công cụ quản lý bí mật chuyên dụng thay vì file google drive thông thường.
+loại tài liệu 5: slide pitch và business summary
+
+ban kỹ thuật: viewer.
+ban thiết kế: editor đối với phần thiết kế slide.
+ban kinh doanh: editor để cập nhật nội dung và chuẩn bị thuyết trình.
+nhà đầu tư: viewer có thời hạn, được tải bản pdf đã được duyệt nếu cần.
+ghi chú bảo mật: giữ file gốc trong thư mục nội bộ, chỉ chia sẻ bản pdf dành riêng cho nhà đầu tư.
+5. trả lời ba tình huống trong đề bài
+tình huống 1: chia sẻ business plan cho ban kỹ thuật nhưng không cho sửa
+em sẽ cấp quyền viewer cho ban kỹ thuật.
+
+với quyền này, thành viên kỹ thuật có thể đọc business plan để hiểu mục tiêu sản phẩm và yêu cầu của khách hàng nhưng không thể chỉnh sửa nội dung gốc.
+
+ban kinh doanh vẫn giữ quyền editor để cập nhật kế hoạch. ngoài ra, file cần đặt ở chế độ restricted và chỉ chia sẻ với tài khoản của những người được phép truy cập.
+
+tình huống 2: nhà đầu tư muốn tải pdf nhưng không được sửa
+em sẽ tạo một bản pdf riêng đã được duyệt và cấp quyền viewer cho nhà đầu tư.
+
+giữ file gốc trong thư mục nội bộ và chỉ cho người phụ trách chỉnh sửa.
+cho phép tải bản pdf dành riêng cho nhà đầu tư để họ có thể thuyết trình offline.
+đặt ngày hết hạn quyền truy cập sau 14 ngày nếu tài khoản hỗ trợ tính năng này.
+tắt quyền tải xuống, in và sao chép đối với file gốc nếu không muốn người xem tải bản đó.
+nếu nhà đầu tư cần tải pdf thì không thể tắt quyền tải xuống trên chính file pdf đó. cách phù hợp là chỉ cho phép tải bản pdf đã được duyệt, không chia sẻ file gốc có thể chỉnh sửa.
+
+cần lưu ý rằng việc hạn chế tải xuống không thể ngăn hoàn toàn việc chụp màn hình hoặc sao chép nội dung bằng cách khác.
+
+tình huống 3: một thành viên nghỉ việc
+khi có thành viên nghỉ việc, em sẽ thực hiện các bước sau:
+
+xóa thành viên khỏi các thư mục và file đã được chia sẻ trực tiếp.
+xóa thành viên khỏi các nhóm google group có quyền truy cập.
+vô hiệu hóa tài khoản ngay nếu đó là tài khoản do tổ chức quản lý.
+chuyển quyền sở hữu các file quan trọng do thành viên đó tạo ra nếu cần.
+kiểm tra lại các liên kết chia sẻ và những quyền truy cập còn tồn tại.
+thay đổi api keys hoặc thông tin đăng nhập mà thành viên đó từng có quyền sử dụng nếu có nguy cơ bị lộ.
+chỉ xóa thành viên khỏi một thư mục là chưa đủ nếu họ vẫn có quyền truy cập thông qua nhóm hoặc file được chia sẻ riêng. vì vậy, cần kiểm tra toàn bộ nguồn cấp quyền để đảm bảo thành viên không còn truy cập được tài liệu nội bộ.

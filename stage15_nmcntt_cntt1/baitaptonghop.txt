@@ -1,0 +1,65 @@
+phần 1: thiết lập hybrid workflow
+1. laptop hỏng ổ cứng
+
+nếu file đã auto sync thành công lên google drive thì vẫn có thể khôi phục. nếu chưa đồng bộ, dữ liệu mới nhất có thể bị mất.
+
+2. ba bước bật auto sync
+
+cài google drive for desktop và đăng nhập.
+chọn thư mục dự án smartcampus để đồng bộ.
+kiểm tra trạng thái đồng bộ và thử mở file trên google drive.
+3. khôi phục file bị xóa nội dung
+
+mở file trên google drive.
+chọn file → version history → see version history.
+chọn phiên bản trước khi xóa và khôi phục, hoặc sao chép riêng hai trang bị mất.
+4. hai sai lầm khi đồng bộ
+
+node_modules: có quá nhiều file nhỏ, nên loại trừ và cài lại bằng file quản lý thư viện.
+phim 4k: tốn dung lượng, không phục vụ đồ án nên không đưa vào thư mục đồng bộ.
+phần 2: phân quyền chia sẻ
+1. quyền cho từng file
+file báo cáo cuối kỳ
+
+quyền: viewer.
+phạm vi: restricted.
+lý do: giảng viên chỉ xem, không sửa nội dung.
+file slide báo cáo
+
+quyền: editor.
+phạm vi: restricted.
+lý do: năm thành viên cùng chỉnh sửa, không cho người ngoài truy cập.
+file góp ý bản nháp
+
+quyền: commenter.
+phạm vi: restricted.
+lý do: anh khóa trên chỉ nhận xét, không sửa trực tiếp.
+file thông tin cá nhân
+
+quyền: chỉ cấp cho người phụ trách thực sự cần truy cập.
+phạm vi: restricted.
+lý do: bảo vệ cccd và số điện thoại.
+2. quy tắc cờ đỏ bảo mật
+tài liệu chứa thông tin nhạy cảm phải đặt restricted, chỉ chia sẻ với người được chỉ định. tuyệt đối không dùng anyone with the link + editor vì có thể làm lộ hoặc bị sửa dữ liệu.
+
+3. hai thao tác trong settings
+tắt quyền cho editor thay đổi quyền truy cập và chia sẻ nếu tùy chọn này khả dụng.
+hạn chế tải xuống, in và sao chép đối với viewer/commenter khi cần thiết.
+phần 3: giao tiếp nhóm
+1. ba vấn đề
+no-hello: hỏi “có ai rảnh không” nhưng không nêu yêu cầu.
+thiếu ngữ cảnh: người nhận không biết cần làm gì và khi nào hoàn thành.
+spam @all và trộn nội dung: nhắc deadline lúc 23:47, tin công việc lẫn với meme.
+2. channel đề xuất
+#thong-bao: deadline và thông báo quan trọng.
+#cong-viec: giao việc và cập nhật tiến độ.
+#bao-cao-do-an: trao đổi nội dung báo cáo.
+#random: trò chuyện và chia sẻ meme.
+3. viết lại tin nhắn của lan
+“mọi người ơi, em đang hoàn thiện phần đăng ký tài khoản trong báo cáo smartcampus nhưng chưa chắc luồng xác thực đã đúng chưa. bạn phụ trách kỹ thuật xem giúp em và phản hồi trước 20h tối nay nhé. nếu chưa tiện thì mọi người phản hồi khi có thời gian. em cảm ơn!”
+
+4. tin nhắn schedule send lúc 8h sáng
+“chào mọi người, hôm nay nhóm cần hoàn thành báo cáo smartcampus. lan và nam, hai bạn vui lòng cập nhật phần còn thiếu trước 9h sáng và báo lại nếu gặp khó khăn. mọi người kiểm tra tiến độ trên file chung để kịp deadline nhé!”
+
+phần 4: thông báo tổng hợp
+“chào mọi người, mình đã bật auto sync cho thư mục smartcampus trên google drive. mọi người nhớ kiểm tra trạng thái đồng bộ để tránh mất dữ liệu. file báo cáo đã được chia sẻ cho giảng viên với quyền viewer và phạm vi restricted. lan và nam, hai bạn vui lòng cập nhật phần còn thiếu trước 9h sáng nay. nếu gặp khó khăn, hãy phản hồi trong thread để nhóm hỗ trợ kịp thời. cảm ơn mọi người!”
