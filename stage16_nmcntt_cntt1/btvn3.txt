@@ -1,0 +1,9 @@
+1 sơ đồ kiến trúc kênh và quy định nội dung
+   channel #general: thông báo chung từ quản lý và thông tin toàn dự án, cấm chat chit hay spam ở đây
+   channel #technical-discussion: nơi anh em trao đổi chuyên môn, code, cảm biến và các vấn đề kỹ thuật của dự án bãi đỗ xe thông minh
+   channel #random-meme: góc giải trí, đăng meme, thả ảnh ui vẻ để xả stress sau giờ code căng thẳng mà không sợ trôi tin quan trọng
+
+2 bản quy ước giao tiếp chống no-hello trap và spam @all
+   quy tắc 1 không dùng câu chào trống không (no-hello): thay vì nhắn mỗi chữ "alo" hay "hi" rồi đợi người ta rep, hãy đặt thẳng vấn đề kèm câu hỏi ở ngay tin nhắn đầu tiê
+   quy tắc 2 tận dụng tính năng reply in thread: bắt buộc phải thảo luận trong luồng (thread) riêng của từng câu hỏi để khung chat chính luôn sạch đẹp, không bị trôi deadline
+   quy tắc 3 hạn chế tối đa spam @all: chỉ dùng khi có thông báo cực kỳ khẩn cấp liên quan đến toàn bộ team, tránh làm phiền lúc anh em đang tập trung gõ code

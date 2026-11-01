@@ -1,0 +1,9 @@
+1 bản thiết kế phân quyền bảo mật dữ liệu nhạy cảm
+viewer (người xem): cấp cho các trưởng bộ phận chỉ được phép xem danh sách cv ứng viên, không được sửa hay tải dữ liệu về máy để bảo mật thông tin sđt và mức lương kỳ vọng
+commenter (người nhận xét): cấp cho nhân sự cấp cao hoặc người kiểm duyệt để ghi chú, góp ý trực tiếp trên tài liệu mà không làm thay đổi dữ liệu gốc
+editor (người chỉnh sửa): tuyệt đối không phân quyền này cho ai ngoài quản trị viên hệ thống để tránh rủi ro rò rỉ dữ liệu ra bên ngoài
+
+2 kịch bản xử lý sự cố lộ lọt quyền editor (quy trình 3 bước)
+    bước 1 thu hồi khẩn cấp: vào ngay phần quản lý chia sẻ file, xóa quyền editor của ứng viên bên ngoài ngay lập tức để chặn đứng đường truy cập tiếp theo
+    bước 2 kiểm tra access audit log: xem lại nhật ký truy cập để kiểm tra xem ứng viên đó đã mở file, copy nội dung hay tải file về máy hay chưa
+    bước 3 áp dụng quy tắc cờ đỏ bảo mật: tạo bản sao mới sạch sẽ hơn, thiết lập lại toàn bộ liên kết chia sẻ mới ở chế độ hạn chế và chỉ cấp quyền xem cho những ai thực sự cần thiết

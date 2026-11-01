@@ -1,0 +1,8 @@
+1 giải pháp kỹ thuật files on-demand
+cấu hình bật tính năng files on-demand (tệp theo yêu cầu) trên các dịch vụ cloud như onedrive hoặc google drive để toàn bộ 500gb dữ liệu video giám sát campus hiển thị trên máy tính nhưng không chiếm dung lượng vật lý
+hệ thống chỉ lưu các file dưới dạng placeholder (ảnh đại diện nhẹ), khi nào thực sự mở xem hoặc chỉnh sửa thì máy mới tự động tải phần dữ liệu cần thiết đó xuống local ssd 256gb rồi tự động giải phóng bộ nhớ sau khi dùng xong, tránh tình trạng tràn ổ cứng hay sập phần mềm đồng bộ
+
+2 báo cáo dung lượng và chứng minh tính hiệu quả
+tổng dung lượng cloud lưu trữ: 500gb dữ liệu cctv video
+dung lượng ổ cứng local ssd: 256gb (thấp hơn nhiều lần so với kho dữ liệu trên cloud)
+chứng minh hiệu quả: nhờ cơ chế on-demand, dung lượng thực tế chiếm dụng trên ssd gần như bằng 0 khi không có file nào mở, giúp máy chạy mượt mà, không bị treo băng thông hay quá tải bộ nhớ đệm, đồng thời giải quyết triệt để bài toán lưu trữ dữ liệu lớn trên thiết bị cấu hình thấp

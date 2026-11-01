@@ -1,0 +1,9 @@
+  báo cáo phân tích và quy trình thực thi hybrid workflow
+1 sơ đồ luồng dữ liệu và cơ chế xử lý xung đột phiên bản
+luồng dữ liệu từ local ssd lên cloud: khi bấm ctrl s trên phần mềm thiết kế 3d, hệ thống nền tảng cloud storage sẽ lập tức đồng bộ file mới nhất qua https lên đám mây, tạo các bản snapshot lưu trữ theo thời gian thực mà không ghi đè ngay lập tức
+xử lý xung đột file version conflict: nếu hai đứa cùng sửa file khi mất mạng rồi kết nối lại cùng lúc, hệ thống sẽ tự sinh ra bản conflict độc lập và cảnh báo để mình chủ động so sánh hoặc quay lại lịch sử phiên bản sạch nhất
+
+2 ba bước thiết lập phần mềm đồng bộ chuẩn cho designer
+   bước 1 cài thư mục làm việc gốc: cài google drive hoặc onedrive, kéo thư mục dự án vào phân vùng cloud và bật chế độ always keep on this device để vừa có bản offline vừa tự động backup
+   bước 2 cấu hình tự động lưu: chỉnh phần mềm thiết kế tự động save mỗi 5 phút vào đúng thư mục cloud, đồng thời nhìn kỹ icon tích xanh trên taskbar để chắc chắn dữ liệu đã được đẩy lên mây thành công
+   bước 3 dự phòng khi sập nguồn hoặc mất mạng: tận dụng bộ nhớ đệm local cache trên máy, lúc nào có mạng trở lại hệ thống tự đồng bộ tiếp phần còn dang dở mà không sợ mất file
