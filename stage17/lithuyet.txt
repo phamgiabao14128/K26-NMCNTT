@@ -1,0 +1,4 @@
+client--->request---->sever---->respone---->output
+cookie: lưu trang thái đăng nhập, duy trì trạng thái đăng nhập trên web
+cake: bộ nhớ đệm thường lưu html, css bên trình duyệt
+extensions: thêm tiện ích

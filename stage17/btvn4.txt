@@ -1,0 +1,14 @@
+PHẦN 1:
++Chế độ ẩn danh: 
+   Cách ly dữ liệu ( data lsolation ): cách ly tốt dữ liệu không dùng cookie, không lưu lại dữ liệu khi sử dụng, tuy nhiên nếu mở nhiều tab ẩn danh cùng lúc thì nó cũng sẽ share dữ liệu cho nhau, dễ gây đè lẫn dữ liệu
+   Khả năng lưu giữ trạng thái lâu dài: Không có vì khi đóng tab ẩn danh tất cả dữ liệu có trong tab sẽ mất hết vì không đc lưu giữ trong cookie hoặcc cake
+   Hiệu suất làm việc: không phù hợp cho việc lập trình lâu dài, phải đăng nhập lại từ đầu khi mở lại tab
++Profile riêng biệt
+   cách ly dữ liệu: cách ly tuyệt đối, mỗi profile sử dụng một cookie, cake riêng nên việc mở lại tab trong mỗi profile sẽ có kết quả khác nhau đc lưu trong từng file đó
+    khả năng lưu trữ trạng thái lâu dài: Có vì trong mỗi profile đều có cookie và cake  nên dữ liệu sẽ được lưu lại
+    Hiệu suất làm việc: Phù hợp cho lâu dài, không cần đăng nhập lại và có những bookmark cần thiết cho mỗi profile
+
+PHẦN 2:
+ Personal : đây là profile dành cho giải trí, dùng cho các hoạt động trên mạng mục đích thư giãn xả stress dành thời gian cho bản thân
+ Work: profile công việc dành riêng cho công việc, làm dự án lưu bookmark hỗ trợ cho công việc thuận tiện cho việc làm
+ Sandbox: đây là thư mục test, kiểm tra các dự án mà không ảnh hưởng đến file dự án chính, mục đích tìm lỗi kiểm tra 

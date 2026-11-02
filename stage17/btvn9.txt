@@ -1,0 +1,21 @@
+PHẦN 1: 
+ 1 do có quá nhiều người dùng chung 1profile có thể trong khi 1 người đang mở tab đăng nhập tài khoản cá nhân 1 người khác cũng dsuwr dụng profile đó để dnhap tk cá nhân của mình dẫn đến hệ thống ghi nhận 2 tk khác nhau dễ khiến hệ thống hiểu lầm đang bị xâm nhập và tự đông văng ra ngoài
+ 2 Profile Work (Xanh dương): Dành riêng cho bác sĩ/điều dưỡng thao tác hệ thống y tế cốt lõi (CarePulse, BHYT)
+   Profile Sandbox/Test (Cam): Dành cho thực tập sinh test tính năng hoặc mở tài khoản phụ.
+   Profile Personal (Xám): Dành cho cá nhân ngoài giờ làm việc.
+   lợi ích cách ly tuyệt đối các dữ liệu riêng  không lo bị đè cookie hay văng giữa các nhân sự
+
+PHẦN 2:
+3 cây thư mục bookmark
+ 01_cảepulse1_clinic
+    trang chủ hệ thông careplus
+    bhyt...
+ 02_pharma_pỏtal
+    tra cứu thuốc
+    giá thuốc
+ 03_medical_tools
+    hướng dẫn điều trị
+    dấu hiệu nhận biết...
+4 nhấp chuột phải vào từng thư mục hoặc liên kết trên thanh Bookmark -> Chọn Chỉnh sửa (Edit) -> Xóa hoàn toàn phần Tên (Name), chỉ giữ lại biểu tượng Favicon mặc định của trang web
+5 nên sử dụng chế độ guest vì chế độ này tạo ra không gian hoàn toàn sạch sẽ
+   nguy cơ về cloud sync: tuyệt đối không bật nếu đang sử dụng máy tính trạm chung nếu bật sẽ bị lưu lại toàn bộ lịch sử mkhau dẫn đến nguy cơ bảo mật bị rò rỉ

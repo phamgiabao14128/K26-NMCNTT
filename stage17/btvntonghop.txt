@@ -1,0 +1,30 @@
+phần a 
+thiết lập profile và bookmark chuẩn dev
+1 nếu dùng chung 1 profile cho github cá nhân và công ty sẽ bị xung đột cookies và session storage dẫn đến liên tục bị văng đăng xuất
+2 mô hình 3 profile
+profile 1: personal - dùng cho cá nhân giải trí
+profile 2: company_work - dùng cho công việc công ty github công ty
+profile 3: sandbox/test - dùng để test tính năng
+3 cấu trúc bookmark gồm 3 thư mục: 01_work_dev (github, jira), 02_study_docs (mdn, tailwind), 03_tools (json formatter, caniuse)
+4 cho đồng nghiệp mượn máy dùng guest profile để hoàn toàn không lưu lịch sử hay dữ liệu cá nhân
+
+phần b chọn extension hỗ trợ
+1 cài extension nhóm dev suite cụ thể là json formatter vì các nhóm khác không có tính năng làm đẹp dữ liệu json
+2 cấu hình site access là on click để bảo mật không cho phép extension đọc ghi mọi trang web
+
+phần c phân tích luồng http request
+1 bốn giai đoạn gồm dns lookup, tcp handshake, http request/response, rendering
+2 bảng mã trạng thái:
+404 not found: lỗi client do sai đường dẫn url, kiểm tra lại cú pháp url
+500 internal server error: lỗi server do mã nguồn backend, báo cáo dev xử lý
+3 mở tab network vì tab này chuyên ghi nhận toàn bộ yêu cầu mạng và mã trạng thái http
+
+phần d chẩn đoán cache và cookies
+1 f5 vẫn thấy giao diện css cũ do browser cache lưu lại, khắc phục bằng hard reload (ctrl f5)
+2 cookie thiếu httponly sẽ dẫn đến rủi ro bị tấn công xss đánh cắp session id qua javascript
+3 để đăng xuất mà giữ cache ảnh/css thì vào tab application xóa thủ công mục cookies và giữ nguyên cache
+
+phần e debug bằng inspect element và network tab
+1 nhấn chuột phải nút đăng nhập chọn inspect rồi sửa trực tiếp thuộc tính background-color trong tab elements
+2 quy trình 4 bước debug network: detect (phát hiện request lỗi), inspect (đọc response/preview), isolate (kiểm tra payload), fix & verify (sửa và chạy lại)
+3 bật bộ lọc fetch/xhr và chọn disable cache trên tab network
