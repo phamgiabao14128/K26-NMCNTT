@@ -1,0 +1,14 @@
+Phần 1: 
+  input: [**phong-dieu-phoi.greenlog.vn**](http://phong-dieu-phoi.greenlog.vn)
+  output: **DNS_PROBE_FINISHED_NXDOMAIN**
+  sơ đồ luồng dữ liệu:
+         kiểm tra cache->truy vấn ip->truy vấn->tìm ở sever->trả về client
+
+Phần 2:
+     quy trình kiểm tra mã trạng thái HTTP status code để xác nhận xem yêu câu đã chạm đến máy chủ:
+B1 ấn f12 chọn network 
+b2 ấn f5
+B3 Nhìn cột nam tìm file trang or API
+B4 Nhìn cột status ( nếu hiện thị một con số thì nó đã chạm đến máy chủ, nếu hiẹn net::ERR_CONNECTION_REFUSED, net::ERR_NAME_NOT_RESOLVED, net::ERR_TIMED_OUT thì chưa chạm đến )
+Phần 3 : 
+Lỗi 404 FOUND là lỗi không tìm thấy trang hoặc dữ liệu

@@ -1,0 +1,9 @@
+phần 1 
+incognito mode là chế độ ẩn danh chỉ lưu trữ dữ liệu tạm thời trên ram, khi đóng tất cả cửa sổ ẩn danh thì toàn bộ lịch sử, cookie, dữ liệu phiên đăng nhập và bộ nhớ cache sẽ bị xóa sạch hoàn toàn, không lưu vào ổ cứng
+dedicated profile là tài khoản cấu hình trình duyệt riêng biệt được lưu trữ lâu dài trên ổ cứng, giúp lưu giữ vĩnh viễn dữ liệu cá nhân như lịch sử duyệt web, mật khẩu, tiện ích mở rộng, cài đặt và bookmark riêng cho từng profile
+
+phần 2 để tạo 3 profile độc lập cho cá nhân, công việc và kiểm thử, bạn nhấp vào biểu tượng profile ở góc trên cùng bên phải trình duyệt chrome, chọn thêm hồ sơ mới và đăng nhập tài khoản google tương ứng
+để đồng bộ hóa cloud sync nhằm bảo vệ bookmark khi đổi máy tính, bạn bật tính năng đồng bộ hóa (turn on sync) trong phần cài đặt của từng profile và chọn đồng bộ toàn bộ dữ liệu bookmark, mật khẩu, tiện ích
+
+phần 3 
+khi sử dụng máy tính công cộng, tuyệt đối không đăng nhập profile cá nhân mà nên sử dụng guest profile (chế độ khách) vì chế độ này tạo một phiên làm việc hoàn toàn cách ly, tự động xóa toàn bộ lịch sử duyệt web và cookie ngay khi cửa sổ khách được đóng lại để đảm bảo không rò rỉ thông tin nhạy cảm

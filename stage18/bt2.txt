@@ -1,0 +1,12 @@
+Phần 1:
+Cache ưu tiên lưu trữ khối lượng dữ liệu nặng để tối ưu tốc độ hiển thị giao diện, còn Cookies tập trung vào việc lưu trữ các mẩu thông tin định danh siêu nhỏ, có cơ chế bảo mật cao và truyền tải liên tục qua lại giữa Client - Server trong mỗi request
+
+Phần 2:
+Token: lưu trữ dữ liệu người dùng
+Max-age: thời gian token tồn tại
+cờ bảo mật: tránh cái cuộc tấn công bảo mất lấy dữ liệu token
+
+Phần 3:
+cách để xóa cache: ấn f12 vào network chọn disable cache ấn f5
+                  or
+                    crtl + shift + r

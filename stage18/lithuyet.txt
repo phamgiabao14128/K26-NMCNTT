@@ -1,0 +1,3 @@
+DNS: Domain name system: tên miền
+CACHE: lNhiệm vụ chính của cache là lưu lại các dữ liệu, hình ảnh, mã nguồn hoặc kết quả tính toán thường xuyên được sử dụng, giúp thiết bị hoặc ứng dụng truy cập lại nhanh hơn rất nhiều ở những lần sau mà không phải tải lại từ đầu hay lấy từ ổ cứng/máy chủ
+
