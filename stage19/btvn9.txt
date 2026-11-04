@@ -1,0 +1,28 @@
+phần 1: báo cáo phân tích kiến trúc an ninh mật khẩu
+1. rủi ro khi lưu mật khẩu trên trình duyệt chrome đối với infostealer:
+trình duyệt chrome lưu toàn bộ mật khẩu người dùng vào tệp cục bộ có tên login data (dưới dạng mã hóa dựa trên windows data protection api - dpapi).
+khi máy tính nhiễm mã độc infostealer, mã độc này sẽ dễ dàng trích xuất thẳng file login data ra khỏi hệ thống, sau đó giải mã và đánh cắp toàn bộ thông tin đăng nhập (username, password) của mọi tài khoản mà không cần mật khẩu chính (master password), cực kỳ nguy hiểm cho lập trình viên.
+2. bản chất kỹ thuật của kiến trúc zero-knowledge và client-side decryption:
+kiến trúc zero-knowledge: nghĩa là máy chủ của nhà cung cấp dịch vụ (như bitwarden) hoàn toàn không biết và không bao giờ lưu trữ mật khẩu chính (master password) hay dữ liệu rõ (plaintext) của người dùng.
+cơ chế client-side decryption: mọi quá trình mã hóa và giải mã dữ liệu đều được xử lý trực tiếp trên thiết bị của người dùng (máy tính/điện thoại) trước khi truyền qua mạng.
+kết quả: nếu máy chủ của bitwarden bị hacker tấn công xâm nhập hoàn toàn, hacker cũng chỉ lấy được các chuỗi dữ liệu đã mã hóa rối rắm (ciphertext) và hoàn toàn không thể giải mã được két sắt của pixelforge studio vì không có khóa gốc từ master password.
+
+phần 2: thiết kế chính sách & kịch bản chuyển đổi
+3. phương pháp tạo master passphrase chuẩn:
+quy tắc: kết hợp ít nhất 4 đến 5 từ ngẫu nhiên không có ý nghĩa liên quan kết hợp với ký tự đặc biệt và chữ số xen kẽ, đạt độ dài từ 20-30 ký tự để vừa dễ nhớ với con người nhưng chống tuyệt đối tấn công vét cạn (brute-force).
+ví dụ cụ thể: táo-xanh-chạy-nhanh-99!
+
+4. bảng cấu hình chuẩn cho công cụ generator trong bitwarden:
+loại mật khẩu: tùy chọn password (mật khẩu ngẫu nhiên).
+độ dài ký tự: thiết lập từ 24 đến 32 ký tự.
+tùy chọn thành phần: bật đầy đủ chữ hoa (a-z), chữ thường (a-z), chữ số (0-9) và các ký tự đặc biệt (!@#$%^&*).
+tắt hoàn toàn các ký tự dễ nhầm lẫn (như l, i, o, 0, 1) để tránh sai sót khi copy.
+
+5. khả năng chống phishing của tính năng auto-fill:
+con người rất dễ bị lừa bởi các trang web giả mạo có tên miền tinh vi (như githúb.com hay steampowered.xyz) vì nhìn giao diện giống hệt trang thật.
+ngược lại, tính năng tự động điền (auto-fill) của bitwarden hoạt động dựa trên cơ chế nhận diện tên miền chính xác (exact domain matching). nếu người dùng truy cập nhầm trang web giả mạo, bitwarden sẽ lập tức nhận ra tên miền không khớp với dữ liệu đã lưu trong két sắt và từ chối tự động điền thông tin, giúp ngăn chặn hoàn toàn việc lộ tài khoản.
+
+6. quy trình lưu trữ khóa cứu hộ (emergency kit):
+bước 1: xuất file emergency kit (chứa thông tin tài khoản, email và mã khẩn cấp) từ tài khoản bitwarden của trưởng phòng kỹ thuật.
+bước 2: in bản cứng tài liệu này ra giấy và cất giữ an toàn tại tủ két sắt vật lý của văn phòng studio.
+bước 3: mã hóa một bản mềm của emergency kit bằng một phần mềm mã hóa độc lập (như 7-zip đặt mật khẩu mạnh) rồi lưu trữ phân tán trên không gian lưu trữ nội bộ bảo mật của ban giám đốc, đảm bảo trưởng nhóm có thể kích hoạt quyền khẩn cấp khi cần thiết mà không phụ thuộc vào một cá nhân.

@@ -1,0 +1,18 @@
+1. báo cáo phân tích (ipo)
+input: máy tính bị nhiễm infostealer, mất quyền kiểm soát facebook và gmail liên tục.
+process:
+ngắt toàn bộ kết nối mạng (wifi/ethernet) ngay lập tức để chặn hacker thao túng.
+đổi mật khẩu và đăng xuất toàn bộ thiết bị lạ từ một thiết bị hoàn toàn sạch khác (điện thoại hoặc máy tính cá nhân an toàn).
+kích hoạt xác thực 2 bước (2fa/mfa) bằng app authenticator cho các tài khoản quan trọng.
+thu hồi quyền truy cập (revoke token) của các ứng dụng lạ trên github, google và facebook.
+quét virus/malware toàn bộ hệ thống hoặc cài lại win nếu cần thiết.
+output: hệ thống và tài khoản được bảo mật tuyệt đối, loại bỏ hoàn toàn mã độc infostealer.
+2. triển khai chi tiết
+đổi mật khẩu từ thiết bị khác:
+dùng điện thoại hoặc máy tính khác đăng nhập vào tài khoản (gmail/facebook).
+vào phần cài đặt bảo mật -> đổi mật khẩu mới mạnh hơn.
+chọn tính năng đăng xuất khỏi tất cả các thiết bị (log out all sessions) để đá kẻ tấn công ra ngoài.
+revoke token trên github:
+vào github settings -> developer settings -> personal accesstokens hoặc oauth apps.
+kiểm tra danh sách các ứng dụng hoặc token đang kết nối.
+nhấn nút revoke để xóa vĩnh viễn quyền truy cập của các app khả nghi.

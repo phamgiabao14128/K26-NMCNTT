@@ -1,0 +1,11 @@
+1. giải pháp sms otp:
+ưu điểm: tiện lợi, tự động nhận mã qua tin nhắn điện thoại, người dùng không cần cài thêm ứng dụng phụ.
+nhược điểm: chi phí vận hành cao vì doanh nghiệp phải trả tiền gửi tin nhắn cho nhà mạng; độ bảo mật thấp, dễ bị tấn công kiểu sim swapping (kẻ xấu chiếm quyền quản lý số điện thoại để nhận mã otp) và dễ bị nghe lén tín hiệu mạng.
+
+2. giải pháp authenticator app (totp):
+ưu điểm: bảo mật cực cao vì mã sinh ngẫu nhiên thay đổi liên tục mỗi 30 giây trực tiếp trên thiết bị cá nhân, chống tuyệt đối sim swapping; hoàn toàn miễn phí cho doanh nghiệp; hoạt động offline ổn định không cần sóng điện thoại hay internet.
+nhược điểm: người dùng phải thao tác mở app thủ công để lấy mã khi đăng nhập.
+
+3. lựa chọn và lập luận giải pháp tối ưu:
+lựa chọn: ưu tiên tuyệt đối authenticator app.
+ập luận: với đặc thù dự án fintech liên quan trực tiếp đến tài chính, việc chống tấn công chiếm đoạt sim (sim swapping) là yếu tố sống còn để bảo vệ tài sản người dùng. đồng thời, app xác thực giúp tiết kiệm triệt để chi phí gửi tin nhắn sms hàng tháng cho hệ thống doanh nghiệp.

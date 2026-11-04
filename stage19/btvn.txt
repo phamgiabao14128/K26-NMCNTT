@@ -1,0 +1,34 @@
+phần 1: phân tích 2 giải pháp xác thực
+1. phân tích 3 yếu tố xác thực danh tính số:
+something you know (thứ bạn biết): mật khẩu (password) hoặc mã pin mà chỉ người dùng mới nắm giữ.
+something you have (thứ bạn sở hữu): thiết bị vật lý như điện thoại di động, thẻ cứng hoặc ứng dụng sinh mã độc lập trên thiết bị.
+something you are (thứ bạn là): các đặc điểm sinh trắc học như vân tay, khuôn mặt hoặc mống mắt.
+xác định yếu tố trong 2fa: khi kích hoạt 2fa, mật khẩu đăng nhập đại diện cho yếu tố something you know, còn mã otp (hoặc mã xác thực) đại diện cho yếu tố something you have (vì mã được sinh ra trên điện thoại hoặc nhận qua số sim mà người dùng sở hữu).
+2. nguyên lý hoạt động của thuật toán totp (time-based one-time password):
+thuật toán totp kết hợp thời gian hiện tại của hệ thống (chia cho khoảng thời gian 30 giây) với một khóa bí mật được chia sẻ trước (shared secret) giữa ứng dụng authenticator và máy chủ.
+khi điện thoại bật chế độ máy bay (ngắt hoàn toàn wi-fi, 4g và sms), đồng hồ nội bộ trên điện thoại vẫn chạy chính xác để tính toán công thức toán học và sinh ra mã 6 số mới liên tục sau mỗi 30 giây hoàn toàn offline mà không cần kết nối mạng.
+
+phần 2: so sánh trade-off và ra quyết định
+3. đánh giá các tiêu chí giữa sms otp và totp authenticator:
+khả năng chống tấn công sim swapping & nghe lén ss7:
+giải pháp 1 (sms otp): kém, dễ bị hacker dùng thủ thuật xã hội chiếm đoạt số điện thoại hoặc nghe lén sóng mạng viễn thông.
+giải pháp 2 (totp authenticator): tuyệt đối an toàn vì khóa bí mật lưu cục bộ trên chip điện thoại, không truyền qua mạng viễn thông.
+tính sẵn sàng khi offline / nước ngoài:
+giải pháp 1 (sms otp): phụ thuộc hoàn toàn vào sóng di động, ranước ngoài hoặc mất sóng sẽ không nhận được mã.
+giải pháp 2 (totp authenticator): hoạt động 100% offline mọi lúc mọi nơi kể cả trên máy bay hay vùng không có sóng.
+độ tiện dụng & chi phí vận hành:
+giải pháp 1 (sms otp): quen thuộc với người dùng nhưng doanh nghiệp tốn chi phí lớn trả cho nhà mạng viễn thông cho mỗi lượt gửi tin nhắn.
+giải pháp 2 (totp authenticator): hoàn toàn miễn phí, thao tác mở app quét mã hoặc lấy mã nhanh chóng.
+rủi ro khi mất điện thoại:
+giải pháp 1 (sms otp): làm lại sim là lấy lại được mã, nhưng nguy cơ bị kẻ xấu trộm sim đánh cắp tài khoản rất cao.
+giải pháp 2 (totp authenticator): cần dùng đến mã khôi phục (backup codes) hoặc tính năng đồng bộ đám mây đã mã hóa để khôi phục.
+4. kết luận lựa chọn cho pixelforge studio:
+lựa chọn: ban giám đốc nên áp dụng tuyệt đối giải pháp 2 (totp authenticator) cho toàn bộ đội ngũ kỹ sư.
+lý do: vì tài khoản quản trị chứa mã nguồn gốc và doanh thu lớn, cộng thêm việc nhân sự thường xuyên đi công tác nước ngoài (tham dự gdc) hoặc làm việc trên chuyến bay không có sóng. đồng thời, ứng dụng xác thực vô hiệu hóa hoàn toàn nguy cơ tấn công sim swapping nhằm vào nhà sáng lập studio.
+phần 3: quản lý rủi ro & backup codes
+5. quản lý bộ 10 mã khôi phục (backup / recovery codes):
+mục đích: dùng để đăng nhập dự phòng khẩn cấp vào tài khoản trong trường hợp điện thoại bị mất, hỏng hoặc cài lại mà không thể mở ứng dụng authenticator để lấy mã.
+hướng dẫn 2 vị trí lưu trữ an toàn tuyệt đối:
+in bản cứng ra giấy và cất giữ trực tiếp trong két sắt chống cháy tại văn phòng công ty.
+lưu một bản mã hóa số trên ổ cứng lưu trữ nội bộ biệt lập hoặc thiết bị lưu trữ vật lý cá nhân (usb bảo mật) giữ kín.
+1 sai lầm tai hại cần tránh: lưu trực tiếp bộ mã khôi phục này vào file ảnh chụp màn hình lưu trên thư viện điện thoại hoặc dán thẳng vào ghi chú công khai trên cloud chung không mã hóa, khiến kẻ xấu lấy được điện thoại là chiếm quyền toàn bộ hệ thống.
