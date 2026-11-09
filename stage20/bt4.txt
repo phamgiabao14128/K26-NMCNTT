@@ -1,0 +1,15 @@
+1 so sánh bảo mật giữa google chrome và bitwarden
+khả năng chống infostealer:
+ google chrome password manager: kém, dữ liệu login data được lưu trữ cục bộ ở định dạng dễ bị mã độc trích xuất và giải mã trên thiết bị
+ bitwarden: tốt, dữ liệu được mã hóa bằng thuật toán mạnh mẽ, ngăn chặn hiệu quả việc đánh cắp hàng loạt thông tin đăng nhập
+ zero-knowledge architecture:
+ google chrome password manager: không hỗ trợ hoàn toàn, google vẫn nắm giữ khóa mã hóa trên đám mây để phục vụ tính năng đồng bộ và tự động
+ bitwarden: hỗ trợ tuyệt đối, chỉ có người dùng mới sở hữu master password, máy chủ hoàn toàn không thể đọc hay biết nội dung dữ liệu
+ khả năng đồng bộ chéo nền tảng:
+ google chrome password manager: tiện lợi, đồng bộ mượt mà trên hệ sinh thái google chrome và các thiết bị android/ios
+ bitwarden: linh hoạt, hỗ trợ đồng bộ xuất sắc trên đa nền tảng bao gồm windows, macos, linux, ios, android và các trình duyệt web khác nhau
+
+2 lý do bitwarden thắng thế về mặt bảo mật dù tốn thêm thao tác nhập master password
+bảo vệ tài sản số trước mã độc infostealer: chrome lưu mật khẩu trong tệp tin cục bộ, nếu máy tính dính mã độc, toàn bộ thông tin tài khoản sẽ bị lấy đi ngay lập tức; trong khi đó, bitwarden yêu cầu mở khóa bằng master password hoặc sinh trắc học, giúp vô hiệu hóa nguy cơ bị trộm trực tiếp từ bộ nhớ
+ kiến trúc zero-knowledge: bitwarden thực hiện mã hóa toàn bộ dữ liệu ngay trên thiết bị của người dùng trước khi đẩy lên đám mây, đảm bảo tính riêng tư và an toàn tuyệt đối
+ đánh đổi hợp lý: thao tác nhập master password chỉ tốn thêm vài giây nhưng đổi lại là sự an toàn vững chắc cho toàn bộ hệ thống tài khoản cá nhân

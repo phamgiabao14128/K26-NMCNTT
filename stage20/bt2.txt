@@ -1,0 +1,12 @@
+1 cơ chế chuỗi tấn công (domino effect) từ mật khẩu bị rò rỉ
+khai thác điểm yếu tái sử dụng mật khẩu: khi tài khoản diễn đàn nhỏ bị hack, hacker lấy được cặp email và mật khẩu "123456"
+   tấn công tự động hàng loạt: hacker dùng chính thông tin đó để đăng nhập tự động vào các dịch vụ lớn như gmail, facebook và github
+   chiếm đoạt toàn bộ không gian số: ngay khi vào được gmail cá nhân, hacker dễ dàng dùng tính năng quên mật khẩu để chiếm đoạt toàn bộ các tài khoản liên kết khác
+
+2 so sánh mật khẩu cảm tính và mật khẩu do máy tính sinh ra
+mật khẩu cảm tính: do con người tự đặt, gắn liền thông tin quen thuộc hoặc chuỗi dễ gõ (123456), không gian mẫu nhỏ nên rất dễ bị bẻ khóa bằng công cụ tự động
+   mật khẩu do máy tính sinh ra: kết hợp ngẫu nhiên ký tự hoa, thường, số và ký tự đặc biệt với độ dài lớn, loại bỏ hoàn toàn yếu tố tâm lý giúp ngăn chặn tuyệt đối các cuộc tấn công vét cạn
+
+3 chuẩn aes-256 và vai trò của password manager
+chuẩn aes-256: thuật toán mã hóa đối xứng cực kỳ mạnh mẽ sử dụng khóa 256 bit, việc giải mã bằng phương pháp vét cạn là bất khả thi về mặt lý thuyết
+  lý do dùng password manager: lưu mật khẩu trong các công cụ như bitwarden an toàn hơn ghi chép thủ công vì toàn bộ dữ liệu được mã hóa bằng aes-256 và chỉ tự động điền khi khớp chính xác tên miền, chống lộ lọt vật lý

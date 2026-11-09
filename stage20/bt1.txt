@@ -1,0 +1,19 @@
+1 phân tích bối cảnh và nhận diện ký tự lạ homograph attack
+ký tự lạ trong url giả mạo
+url giả mạo hiển thị trên thanh địa chỉ: [https://githúb.com/login](https://githúb.com/login)
+ý tự bất thường: chữ cái ú (chữ u kèm dấu sắc, mã unicode: U+00FA)
+giải thích cơ chế đánh lừa người dùng
+tấn công giả mạo đồng hình (idn homograph attack): kẻ tấn công lợi dụng việc hệ thống tên miền quốc tế hóa (idn) cho phép sử dụng các ký tự unicode trong địa chỉ web
+ánh lừa thị giác: ký tự ú có hình dáng gần như hoàn toàn giống với ký tự u chuẩn trong từ github.com khi nhìn lướt qua bằng mắt thường rất dễ bỏ qua chi tiết này
+hậu quả: trình duyệt sẽ phân giải tên miền chứa ký tự unicode thành dạng mã hóa punycode (bắt đầu bằng tiền tố xn--) khiến người dùng truy cập nhầm vào máy chủ do kẻ xấu kiểm soát để đánh cắp thông tin đăng nhập
+
+2 đề xuất quy trình kiểm tra url nhanh trước khi nhập master password
+
+ bước 1 kiểm tra nhanh bằng mắt thường và thao tác cơ bản
+1 kiểm tra tên miền gốc (domain name): luôn nhìn kỹ phần tên miền chính ngay trước dấu gạch chéo đầu tiên tên miền chuẩn phải là github.com chính xác từng ký tự không chứa dấu
+2 thao tác bôi đen hoặc click đúp url: khi bôi đen thanh địa chỉ các trình duyệt hiện đại sẽ hiển thị rõ tên miền gốc dưới dạng punycode xn--... nếu phát hiện ký tự quốc tế khả nghi
+3 kiểm tra giao thức https và chứng chỉ số: nhấp vào biểu tượng ổ khóa bên trái thanh địa chỉ để xem thông tin chứng chỉ có đúng do github, inc cấp hay không
+
+ bước 2 sử dụng công cụ hỗ trợ kỹ thuật
+trình quản lý mật khẩu (password managers): sử dụng bitwarden hoặc 1password các công cụ này chỉ tự động điền mật khẩu khi tên miền khớp chính xác 100% và sẽ từ chối điền trên trang giả mạo
+công cụ kiểm tra url trực tuyến: sử dụng virustotal để quét độ uy tín hoặc dùng các trang chuyển đổi punycode

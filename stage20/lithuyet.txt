@@ -1,0 +1,12 @@
+Bảo Mật:
+1.Phishing: tấn công giả mạo thông qua honhf thức gửi tin nhắn giả mạo các trang web yêu cầu đăng nhập xác thực
+2. Crack: Ứng dụng hay phần mềm miễn phí tránh vi phạm bản quyền trong này chứa các mã độc 
+3. xác minh tài khoản qua nhiều lớp
+    2FA: two factot authentication
+            đăng nhập tên tk+mk
+            dịch vụ otp hoặc totp
+    MFA: nhiều lớp
+4. quản lí tài khoản tập trung
+     +không được dùng 1 maatj khẩu cho nhiều tài khoản
+     +nhiều cách quản lí: ghi giấy, drive, notepaf,...
+     +bitwwarden:

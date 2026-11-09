@@ -1,0 +1,14 @@
+1 báo cáo phân tích ipo quản lý rủi ro khi mất thiết bị xác thực
+input (mã dự phòng - backup codes)
+danh sách các chuỗi mã dự phòng dùng một lần (one-time backup codes) đã được hệ thống aws cung cấp và lưu trữ ngoại tuyến (in trên giấy hoặc lưu trong thiết bị lưu trữ độc lập được mã hóa) khi kích hoạt bảo mật 2FA
+ process (xử lý sự cố và khôi phục)
+xác thực danh tính: đăng nhập vào trang quản lý aws bằng tài khoản chính, khi hệ thống yêu cầu mã google authenticator và điện thoại bị mất, chọn phương thức đăng nhập thay thế bằng mã dự phòng
+ hủy mã cũ và thiết bị cũ: nhập một mã dự phòng hợp lệ để vượt qua lớp xác thực, ngay lập tức vào phần cài đặt bảo mật để vô hiệu hóa (revoke) thiết bị google authenticator cũ nhằm khóa quyền truy cập của người nhặt được điện thoại
+ cấp mã mới: thiết lập liên kết 2fa mới với ứng dụng authenticator trên thiết bị thay thế, đồng thời tạo mới và cất giữ một bộ mã dự phòng mới
+ output (hệ thống an toàn)
+lấy lại quyền truy cập quản trị aws thành công để thực hiện bảo trì hệ thống, đồng thời vô hiệu hóa hoàn toàn nguy cơ rò rỉ dữ liệu từ thiết bị đã mất
+
+2 lý do không được lưu backup codes dưới dạng ảnh trong thư viện điện thoại
+nguy cơ lộ lọt qua cloud sync: nếu bật chế độ đồng bộ ảnh tự động lên các dịch vụ đám mây (như google photos, icloud), hình ảnh chứa mã dự phòng sẽ bị đẩy lên server, tạo ra điểm yếu chết người nếu tài khoản đám mây bị xâm phạm
+ nguy cơ từ ứng dụng độc hại: các ứng dụng chụp ảnh hoặc ứng dụng bên thứ ba được cấp quyền truy cập toàn bộ thư viện ảnh có thể âm thầm quét và đánh cắp hình ảnh chứa mã bảo mật
+ mất an toàn khi mất thiết bị: nếu điện thoại không được mã hóa kỹ càng, bất kỳ ai cầm được thiết bị ở trạng thái mở khóa đều có thể dễ dàng truy cập vào album ảnh để lấy toàn bộ mã dự phòng và chiếm đoạt tài khoản quản trị aws
