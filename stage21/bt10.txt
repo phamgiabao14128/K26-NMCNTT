@@ -1,0 +1,32 @@
+phần 1 đánh giá trade-off giữa hai phương án vận hành
+phương án 1: hỗ trợ cảm tính / nhóm chat
+
+thời gian xử lý sự cố (downtime): kéo dài, phụ thuộc vào việc senior dev có rảnh tay để trả lời tin nhắn hay không
+
+áp lực cho senior devs: rất cao, bị phân tâm liên tục bởi các câu hỏi lỗi cơ bản lặp đi lặp lại hàng ngày
+
+năng lực kỹ thuật viên: thụ động, không phát triển được kỹ năng tự giải quyết sự cố
+
+khả năng lưu vết tri thức: thất thoát, tin nhắn trôi mất trên nhóm chat
+
+phương án 2: troubleshooting 4 chặng chuẩn hóa
+
+thời gian xử lý sự cố (downtime): rút ngắn 80%, kỹ thuật viên tự xử lý tại chỗ trong vài phút đầu
+
+áp lực cho senior devs: tối ưu, chỉ tiếp nhận các ca lỗi thực sự phức tạp đã qua lọc
+
+năng lực kỹ thuật viên: chủ động, tư duy phân tích sắc bén và làm chủ công nghệ
+
+khả năng lưu vết tri thức: lưu trữ tập trung thành tài liệu wiki nội bộ của công ty
+
+kết luận lựa chọn của ban giám đốc
+ban giám đốc bắt buộc phải chọn phương án 2 để khi mở rộng quy mô lên 1,000 trạm sạc, đội ngũ kỹ sư cấp cao không bị quá tải, đồng thời giảm thiểu tối đa thời gian downtime và giữ vững uy tín thương hiệu
+
+phần 2 sơ đồ luồng ra quyết định gỡ lỗi (decision flowchart)
+chặng 1: khi gặp error pop-up ➔ bóc tách từ khóa và gõ tìm kiếm trên google kết hợp toán tử site:, dấu ngoặc kép " ", và dấu trừ -.
+
+chặng 2: nếu có kết quả từ stackoverflow hoặc github ➔ áp dụng quy tắc đọc lướt 30 giây và kiểm tra dấu tích xanh hoặc lượt upvote cao nhất.
+
+chặng 3: nếu thông báo lỗi quá khó hiểu ➔ gửi prompt 3 thành phần cho trợ lý ai để lấy bản giải thích chi tiết bằng tiếng việt.
+
+chặng 4: nếu thử các giải pháp vẫn thất bại sau 15 phút ➔ điền đầy đủ phiếu bug report chuẩn 4 bước rồi gửi về phòng it helpdesk để xử lý.

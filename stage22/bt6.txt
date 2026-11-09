@@ -1,0 +1,28 @@
+phần 1 prompt 3 thành phần chuẩn hóa giải thích lỗi permission denied
+[context]: tôi đang cần đẩy mã nguồn lên GitHub để kịp thời hạn nộp bài, hiện tại đang làm việc trong thư mục dự án cục bộ trên máy tính
+
+[raw error]: error: open(".git/FETCH_HEAD"): Permission denied
+
+[instruction]: hãy giải thích ý nghĩa câu lỗi này bằng tiếng Việt bình dân cho sinh viên mới học và hướng dẫn nguyên nhân tại sao thư mục .git lại bị từ chối quyền truy cập
+
+phần 2 hướng dẫn xử lý và chụp ảnh minh họa quyền run as administrator
+nguyên nhân lỗi: do trước đó bạn hoặc một tiến trình hệ thống đã vô tình khởi tạo hoặc chạy lệnh Git bằng quyền Quản trị viên cao nhất (Administrator), khiến các tệp tin bên trong thư mục ẩn .git (như FETCH_HEAD) bị khóa quyền ghi đối với tài khoản người dùng thông thường hiện tại.
+
+cách khắc phục và chụp ảnh minh họa:
+
+Nhấn chuột phải vào biểu tượng Terminal (hoặc Git Bash / Command Prompt) rồi chọn Run as administrator.
+
+Tại cửa sổ dòng lệnh có quyền cao nhất, thực hiện kiểm tra phân quyền hoặc chạy lại lệnh đẩy code (git push origin main).
+
+Yêu cầu chụp ảnh màn hình: Khi chụp lại màn hình terminal, hãy khoanh vùng rõ dòng lệnh báo lỗi hoặc thông báo thành công, đồng thời dùng công cụ che mờ các thông tin nhạy cảm như tên tài khoản cá nhân, đường dẫn thư mục chứa họ tên thật hoặc mã token trước khi đưa vào báo cáo.
+
+phần 3 mẫu tin nhắn nhờ giảng viên hỗ trợ (Bug Reporting Framework)
+khi đã thử chạy quyền quản trị viên nhưng vẫn không khắc phục được, hãy gửi tin nhắn nhờ giảng viên hỗ trợ theo đúng chuẩn cấu trúc sau:
+
+[Context]: em đang thực hiện bài tập đẩy code lên GitHub tại phòng máy, hệ điều hành đang dùng là Windows 11 phiên bản mới nhất.
+
+[Expected]: khi gõ lệnh git push origin main, hệ thống phải xác thực thành công và đẩy code lên repository công khai của môn học.
+
+[Actual]: Terminal liên tục báo lỗi từ chối quyền truy cập mặc dù em đã thử mở công cụ dòng lệnh với quyền Administrator.
+
+[Log]: error: open(".git/FETCH_HEAD"): Permission denied

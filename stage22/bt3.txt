@@ -1,0 +1,20 @@
+phần 1 báo cáo phân tích ipo xử lý lỗi path not found khi cài đặt python
+input (đầu vào)
+câu trả lời và đoạn mã lệnh do trợ lý ai cung cấp để khắc phục lỗi "path not found" khi cài đặt python trên máy tính, nhưng lệnh trông rất lạ và có nguy cơ can thiệp sâu vào hệ thống
+
+process (quá trình kiểm chứng)
+kiểm tra tính an toàn: tuyệt đối không copy và dán thẳng câu lệnh lạ vào terminal ngay lập tức để tránh dính mã độc hoặc làm hỏng cấu hình hệ điều hành
+
+tra cứu kiểm chứng: sử dụng công cụ tìm kiếm google search kết hợp toán tử chuyên dụng như site:stackoverflow.com hoặc trang chủ tài liệu chính thức site:docs.python.org để đối chiếu xem cú pháp lệnh đó có thực sự tồn tại và an toàn hay không
+
+output (đầu ra)
+xác nhận lệnh của ai là không an toàn (hoặc sai lệch do ảo giác ai hallucination), từ đó loại bỏ câu lệnh đó và tìm ra giải pháp chuẩn xác từ tài liệu chính thống của python (như thêm đường dẫn python vào biến môi trường PATH thủ công trong cài đặt windows)
+
+phần 2 thiết kế prompt hỏi ngược lại ai để kiểm tra độ an toàn
+bối cảnh: bạn vừa đưa cho tôi một câu lệnh để khắc phục lỗi "path not found" khi cài đặt python, nhưng tôi thấy nó khá lạ và lo ngại có thể ảnh hưởng đến hệ thống
+
+hành vi mong muốn: hãy giải thích chi tiết từng thành phần trong câu lệnh đó, nó tác động cụ thể đến những tệp tin hoặc thư mục nào trên hệ điều hành, và chỉ ra rủi ro tiềm ẩn nếu tôi thực thi nó
+
+hành vi thực tế: tôi chưa chạy lệnh trên terminal và muốn bạn xác thực lại xem đây có phải là giải pháp chuẩn chính thống từ tài liệu python không
+
+câu lệnh cần kiểm tra: [dán đoạn lệnh nghi vấn của ai vào đây để kiểm tra]

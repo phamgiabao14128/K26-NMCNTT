@@ -1,0 +1,23 @@
+phần 1 đánh giá ưu nhược điểm của hai giải pháp trên stack overflow
+giải pháp 1: có tích xanh (accepted checkmark), đăng từ năm 2014, có 500 upvotes
+
+ưu điểm: độ tin cậy lịch sử cao, từng được cộng đồng công nhận là câu trả lời chuẩn xác nhất trong một giai đoạn dài, có số lượng lớn người xác nhận hiệu quả
+
+nhược điểm: đã cũ (hơn 10 năm trước), không còn bắt kịp các thay đổi mới về giao diện hệ điều hành hiện đại, các công cụ git hoặc cơ chế bảo mật ssh hiện nay, dễ gây lỗi hoặc không hoạt động trên các bản phân phối mới
+
+giải pháp 2: không có tích xanh, đăng từ năm 2023, có 50 upvotes kèm bình luận "this works for windows 11"
+
+ưu điểm: tính cập nhật cao, giải quyết trực tiếp các vấn đề phát sinh trên hệ điều hành mới (windows 11), được người dùng thực tế xác nhận thành công gần đây
+
+nhược điểm: điểm uy tín ít hơn, chưa được chủ thắc mắc bấm nút chấp nhận chính thức, cần người xem tự kiểm tra kỹ trước khi áp dụng
+
+phần 2 chốt lựa chọn và lý do "tích xanh" không còn là ưu tiên số 1
+chốt lựa chọn: ưu tiên chọn giải pháp 2 (cập nhật mới năm 2023) cho các môi trường hệ điều hành hiện đại như windows 11.
+
+lập luận tại sao "tích xanh" đôi khi không phải là ưu tiên số 1:
+
+công nghệ thay đổi liên tục, các lệnh git, phiên bản openssh và cấu hình bảo mật trên hệ điều hành cập nhật rất nhanh theo từng năm
+
+một giải pháp có tích xanh từ năm 2014 có thể hoàn toàn chính xác trong quá khứ, nhưng nếu áp dụng vào năm 2026 trên windows 11, nó sẽ lỗi thời, dùng các cú pháp cũ hoặc thậm chí làm hỏng thiết lập hiện tại của máy tính
+
+do đó, tính cập nhật và sự xác nhận thực tế từ cộng đồng qua bình luận mới mang giá trị thực tiễn cao hơn một biểu tượng tích xanh đã cũ kỹ theo thời gian

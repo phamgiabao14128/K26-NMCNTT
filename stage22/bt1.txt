@@ -1,0 +1,17 @@
+phần 1 cấu trúc truy vấn google search nâng cao
+chuỗi truy vấn (query) hoàn chỉnh:"nhập môn công nghệ thông tin" filetype:pdf site:ptit.edu.vn -site:tailieu.vn -site:doc123.net
+
+giải thích chi tiết các thành phần trong chuỗi truy vấn:
+
+"nhập môn công nghệ thông tin": sử dụng dấu ngoặc kép để bắt buộc bộ máy tìm kiếm quét chính xác cụm từ khóa này, giúp loại bỏ các kết quả lạc chủ đề
+
+filetype:pdf: giới hạn kết quả trả về chỉ tìm các tệp tin có định dạng tài liệu pdf, tránh việc phải bấm vào các trang web đọc bài viết rườm rà
+
+site:ptit.edu.vn: chỉ định tìm kiếm độc quyền trên máy chủ chính thức của học viện, đảm bảo tài liệu lấy ra là giáo trình chuẩn do trường phát hành
+
+-site:tailieu.vn -site:doc123.net: sử dụng toán tử trừ kết hợp từ khóa site: để loại bỏ hoàn toàn các trang web rác, trang tổng hợp tài liệu trôi nổi hoặc các dịch vụ bắt nạp thẻ tải tài liệu
+
+phần 2 lý do toán tử filetype giúp tiết kiệm thời gian
+loại bỏ các bước trung gian: thay vì phải click vào các trang web diễn đàn, đọc các bài viết quảng cáo dài dòng và tìm link download ẩn, toán tử filetype:pdf ép google trả về thẳng đường dẫn tải tệp tài liệu nguyên gốc
+
+chọn lọc nguồn uy tín: khi kết hợp với site:, người dùng không phải mất thời gian kiểm tra xem tài liệu đó có chứa mã độc hay không vì file tải về nằm trực tiếp trên máy chủ giáo dục chính thống

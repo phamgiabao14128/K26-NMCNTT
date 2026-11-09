@@ -1,0 +1,18 @@
+1 bảng so sánh ưu nhược điểm giữa google search và ai assistant
+độ chính xác:
+google search: cao khi lấy trực liệu từ nguồn tài liệu gốc, nhưng đòi hỏi người dùng phải tự lọc thông tin từ nhiều bài viết khác nhau
+ai assistant: đôi khi gặp hiện tượng bịa đặt thông tin (hallucination), cần phải kiểm chứng lại với tài liệu chính thống
+tính cập nhật:
+google search: cực kỳ cập nhật, tìm được các bài thảo luận mới nhất trên stackoverflow hoặc github issues theo thời gian thực
+ai assistant: phụ thuộc vào dữ liệu huấn luyện, có thể không nắm bắt kịp thời các bản vá lỗi hoặc thay đổi công nghệ mới nhất
+khả năng giải thích:
+google search: chỉ cung cấp các bài viết sẵn có, người dùng phải tự đọc hiểu và tự tổng hợp cách áp dụng vào mã nguồn của mình
+ai assistant: xuất sắc trong việc phân tích chi tiết mã nguồn, giải thích cặn kẽ nguyên nhân gây lỗi và đưa ra đoạn mã sửa lỗi trực tiếp
+rủi ro (hallucination):
+google search: rủi ro thấp vì trả về kết quả từ các trang web thực tế đã được kiểm chứng qua cộng đồng lập trình
+ai assistant: rủi ro cao nếu ai tự tin đưa ra các câu trả lời sai lệch hoặc các đoạn mã không tồn tại, dễ gây hỏng mã nguồn nếu áp dụng mù quáng
+
+2 lựa chọn trường hợp bắt buộc phải dùng google search để đảm bảo an toàn cho máy tính
+xử lý các lỗi liên quan đến bảo mật hệ thống, mã độc hoặc cấu hình nhạy cảm (như credential, token, api keys, chứng chỉ ssl):
+
+lý do: khi gặp các vấn đề bảo mật chuyên sâu hoặc sự cố liên quan đến hệ thống máy chủ/mạng nội bộ, việc đưa mã nguồn hoặc thông tin cấu hình nhạy cảm lên các công cụ ai công cộng có nguy cơ làm rò rỉ dữ liệu doanh nghiệp hoặc cá nhân. trong trường hợp này, bắt buộc phải tra cứu thủ công qua google search trên các tài liệu chính thống (như tài liệu bảo mật của aws, github docs, microsoft docs) để đảm bảo an toàn tuyệt đối cho thiết bị và dữ liệu

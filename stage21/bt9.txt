@@ -1,0 +1,28 @@
+phần 1 thiết kế prompt 3 thành phần chuẩn hóa
+1 nguyên nhân khiến ai đưa ra câu trả lời sai lệch (ai hallucination)
+câu hỏi "ai ơi phần mềm trạm sạc của tôi bị hỏng rồi làm sao đây" quá cụt ngủn, thiếu hoàn toàn ngữ cảnh kỹ thuật quan trọng như hệ điều hành đang dùng, tên ứng dụng hoặc bản chất lỗi
+
+điều này buộc ai phải phỏng đoán mù quáng, dẫn đến hiện tượng ảo giác (hallucination) và đưa ra lời khuyên sai lệch hoàn toàn như tháo tung phần cứng trạm sạc
+
+2 mẫu prompt 3 thành phần hoàn chỉnh gửi cho trợ lý ai
+[context]: tôi đang vận hành hệ thống kiosk nạp năng lượng thông minh chạy trên hệ điều hành windows 11, gặp sự cố ứng dụng controllerdaemon bị dừng đột ngột
+
+[raw error]: [terminal error log - voltcharger charger #04] 2026-09-21 21:15:30 [fatal] controllerdaemon failed to start. system.unauthorizedaccessexception: access to the path 'c:\program files\voltcharger\data\session.log' is denied. at [system.io](http://system.io/).filestream.validatefilehandle(safefilehandle handle) at voltcharger.core.sessionmanager.initialize()
+
+[instruction]: hãy giải thích ý nghĩa câu lỗi này bằng tiếng việt bình dân cho kỹ thuật viên mới và đưa ra 3 bước khắc phục cụ thể tại chỗ
+
+phần 2 giải mã lỗi và kịch bản khắc phục
+3 bản dịch và giải thích nguyên nhân gốc rễ
+bản dịch tiếng việt: ngoại lệ truy cập không được phép, quyền truy cập vào đường dẫn tệp log bị từ chối
+
+nguyên nhân: ứng dụng không có quyền ghi dữ liệu vào thư mục bảo vệ program files của hệ thống, dẫn đến việc không thể tạo hoặc cập nhật file session.log và bị tắt đột ngột với mã lỗi 5
+
+4 ba bước xử lý cụ thể trên windows 11
+1 khởi chạy với quyền quản trị viên: nhấn chuột phải vào ứng dụng kiosk hoặc terminal rồi chọn run as administrator để cấp toàn quyền hệ thống
+2 kiểm tra và phân quyền ntfs: mở thuộc tính của thư mục data tại đường dẫn c:\program files\voltcharger\data, vào tab security và cấp quyền full control cho tài khoản đang vận hành
+3 khởi động lại dịch vụ: chạy lại ứng dụng controllerdaemon để kiểm tra trạm sạc đã hoạt động bình thường trở lại chưa
+
+5 xử lý bẫy an ninh (api key)
+cách xử lý: kỹ thuật viên phải ngay lập tức xóa bỏ hoặc thay thế chuỗi mã bí mật (như api_key: volt_secret_token_889922) bằng các ký tự che giấu chung chung (như [REDACTED] hoặc ***) trước khi dán vào khung chat của ai
+
+lý do: các nền tảng ai công cộng có thể lưu trữ lịch sử đoạn chat hoặc dùng dữ liệu đầu vào để huấn luyện mô hình, việc để lộ token nhạy cảm sẽ tạo lỗ hổng bảo mật nghiêm trọng cho toàn bộ hệ thống trạm sạc

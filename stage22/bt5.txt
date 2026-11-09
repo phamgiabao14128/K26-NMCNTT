@@ -1,0 +1,41 @@
+phần 1 thiết kế bug report template chuẩn hóa (4 mảnh ghép)
+để giải quyết triệt để tình trạng nhắn tin hỗn loạn và trôi thông tin trên nhóm chat khi gặp lỗi vặt (docker, port conflict), nhóm bắt buộc các thành viên phải sử dụng mẫu phiếu báo cáo lỗi chuẩn gồm 4 thành phần sau trước khi nhờ hỗ trợ:
+
+1. context (bối cảnh):
+
+mô tả rõ môi trường đang làm việc (hệ điều hành, phiên bản docker, nhánh git hiện tại, dịch vụ đang chạy)
+
+ví dụ: đang chạy docker compose trên windows 11, nhánh main, dự án ecommerce
+
+2. expected (hành vi mong muốn):
+
+mô tả kết quả đúng lẽ ra phải xảy ra theo tài liệu kỹ thuật hoặc thiết kế hệ thống
+
+ví dụ: lệnh docker-compose up khởi động thành công container api service trên cổng 8080
+
+3. actual (hành vi thực tế):
+
+mô tả chính xác sự cố đang xảy ra khác biệt như thế nào so với mong đợi
+
+ví dụ: container bị dừng đột ngột ngay khi vừa khởi tạo và báo lỗi xung đột cổng
+
+4. log (mã lỗi / thông báo thực tế):
+
+dán nguyên văn đoạn mã lỗi chi tiết từ terminal hoặc log file mà không cắt xén
+
+ví dụ: Error response from daemon: driver failed programming external connectivity on endpoint web-api: Bind for 0.0.0.0:8080 failed: port is already allocated
+
+phần 2 đề xuất quy trình 3 bước tra cứu bắt buộc (trước khi nhờ hỗ trợ)
+mỗi thành viên trong nhóm phải tự thực hiện lần lượt 3 bước sau để tự giải quyết tối thiểu 80% vấn đề trước khi gửi phiếu báo cáo lỗi lên kênh chung:
+
+bước 1: googling chủ động
+
+bóc tách từ khóa chính xác từ thông báo lỗi (ví dụ: bind for 0.0.0.0 port is already allocated) và tiến hành tìm kiếm trên google kết hợp các toán tử chuyên dụng như dấu ngoặc kép " " hoặc site:stackoverflow.com để tìm các trường hợp tương tự đã được giải quyết.
+
+bước 2: community search (tìm kiếm trong cộng đồng và mã nguồn mở)
+
+kiểm tra các trang thảo luận kỹ thuật uy tín như github issues, stack overflow hoặc tài liệu chính thức của công nghệ đang dùng (docker docs) để xem lỗi này do xung đột tiến trình nào đang chiếm cổng.
+
+bước 3: ai translation & explanation (sử dụng trợ lý ai để phân tích)
+
+nếu nội dung lỗi quá khó hiểu, biên soạn prompt 3 thành phần gửi cho trợ lý ai để nhờ dịch nghĩa tiếng việt bình dân, hiểu rõ nguyên nhân gốc rễ và nhận các gợi ý câu lệnh khắc phục tại chỗ (như dùng lệnh netstat -ano | findstr :8080 để tìm và tắt tiến trình đang chiếm cổng).

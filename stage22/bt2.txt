@@ -1,0 +1,13 @@
+phần 1 ưu tiên đặc điểm của các bình luận trong github issues
+lượng tương tác cao (reactions / thumbs up / hearts): khi kiểm tra một luồng thảo luận (issue) đang mở (OPEN), bạn cần ưu tiên đọc ngay các bình luận có nhiều lượt thả cảm xúc (như biểu tượng ngón tay cái  hoặc trái tim . điều này chứng minh rằng đông đảo lập trình viên khác cũng gặp chính xác lỗi tương tự và đoạn mã hoặc phương án xử lý trong bình luận đó đã được cộng đồng kiểm chứng là hiệu quả
+
+phản hồi từ chủ sở hữu hoặc maintainer: ưu tiên các bình luận có gắn nhãn hoặc huy hiệu của tác giả dự án (author, member, owner) vì họ là những người nắm rõ mã nguồn nhất và thường đưa ra hướng khắc phục chính xác hoặc xác nhận thời điểm phát hành bản vá
+
+phần 2 giải thích khái niệm workaround và lý do không nên đợi bản cập nhật chính thức
+khái niệm workaround (giải pháp tạm thời): là một phương án xử lý thủ công, thay đổi cấu hình hoặc chèn một đoạn mã chỉnh sửa nhỏ nhằm vượt qua lỗi hiện tại ngay lập tức mà không cần chờ đợi nhà phát triển tung ra bản cập nhật phần mềm chính thức
+
+lý do không nên đợi bản cập nhật chính thức ngay lúc đó:
+
+quá trình đội ngũ phát triển phát hiện lỗi, viết mã sửa, kiểm thử (testing) và phát hành bản cập nhật mới (patch/release) có thể mất vài ngày hoặc thậm chí vài tuần
+
+nếu cứ chờ đợi, toàn bộ tiến độ công việc và dự án của bạn sẽ bị đình trệ hoàn toàn (downtime kéo dài), gây ảnh hưởng nghiêm trọng đến hiệu suất học tập và làm việc

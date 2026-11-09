@@ -1,0 +1,22 @@
+1 báo cáo phân tích ipo xử lý lỗi git
+input (ngữ cảnh và mã lỗi): bạn gõ lệnh git và gặp lỗi "fatal: not a git repository (or any of the parent directories): .git" nhưng chưa hiểu tiếng anh
+
+process (cách xử lý): dịch nghĩa câu lỗi để biết thư mục hiện tại chưa được khởi tạo git, sau đó lập ra các bước khắc phục đơn giản
+
+output (kết quả và 3 bước sửa lỗi):
+
+bản dịch: thông báo lỗi nghĩa là "không tìm thấy kho lưu trữ git trong thư mục này"
+
+3 bước sửa lỗi:
+1 kiểm tra lại thư mục hiện tại bằng lệnh pwd xem đã đúng chỗ chưa
+2 di chuyển vào đúng thư mục dự án bằng lệnh cd [tên_thư_mục]
+3 nếu là dự án mới tinh, gõ lệnh git init để khởi tạo git
+
+2 prompt hoàn chỉnh gửi cho ai
+bối cảnh: tôi đang dùng git trên terminal thì gặp lỗi "fatal: not a git repository (or any of the parent directories): .git"
+
+hành vi mong muốn: hãy giải thích câu lỗi này bằng tiếng việt và hướng dẫn tôi các bước sửa lỗi chi tiết
+
+hành vi thực tế: gõ lệnh git status thì bị dừng lại và báo lỗi như trên
+
+log lỗi: fatal: not a git repository (or any of the parent directories): .git
